@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>幸运萌妹在线减产</title>
-    <updated>2020-04-15T14:16:58.647Z</updated>
+    <updated>2020-04-15T14:18:45.930Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -16,7 +16,8 @@
         <link href="https://mbkotori.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <content type="html"><![CDATA[<!-- more -->
+<blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
