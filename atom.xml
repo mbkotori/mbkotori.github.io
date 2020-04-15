@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>幸运萌妹在线减产</title>
-    <updated>2020-04-15T14:28:24.585Z</updated>
+    <updated>2020-04-15T16:52:09.728Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://mbkotori.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 幸运萌妹在线减产</rights>
     <entry>
-        <title type="html"><![CDATA[关于作者,和这个blog]]></title>
+        <title type="html"><![CDATA[关于作者,和这个blog(需要评论请务必阅读该文!)]]></title>
         <id>https://mbkotori.github.io/post/hello-blog/</id>
         <link href="https://mbkotori.github.io/post/hello-blog/">
         </link>
@@ -20,9 +20,18 @@
 <p>欢迎来到我的小站</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<pre><code>本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.
+本来考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.
+</code></pre>
+<h2 id="博客内容">👨‍💻 博客内容</h2>
+<pre><code>主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审核范围,大家辩证阅读即可).
+个人更新时间不定,有兴趣的话题可以在留言区提出,有机会整理出来和大家一起分享.
+</code></pre>
 <h2 id="联系我呀">📬 联系我呀</h2>
+<pre><code>本来是想使用Gittalk作为blog的评论系统,但是考虑到需要登陆github还是有点麻烦的,网站也需要一个图床来存图,索性使用了一个折衷的方案:永硕E盘.
+永硕E盘既可以作为图床,也有着一个简易的留言板可以作为评论区来供大家联系我,我会定期在上面进行回复,留言区限制1K条信息所以不重要的或者已解决的会删除.
+我们的评论系统:&lt;http://mbkotori.ys168.com/&gt;
+</code></pre>
 ]]></content>
     </entry>
 </feed>
