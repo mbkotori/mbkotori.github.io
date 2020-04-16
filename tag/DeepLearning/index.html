@@ -16,19 +16,19 @@ function getCSS()
         datetoday.setTime(timenow);
         thehour = datetoday.getHours();
 
-        if (thehour<1:05)
+        if (thehour<6)
 
             display = "https://mbkotori.github.io/media/css/night.css";
 
-       else if (thehour>1:00)
+       else if (thehour>22)
 
             display = "https://mbkotori.github.io/media/css/night.css";   
 
-        else if (thehour>1:05)
+        else if (thehour>6)
            
             display = "https://mbkotori.github.io/media/css/day.css";
 
-        else if (thehour<1:00)
+        else if (thehour<22)
 
             display = "https://mbkotori.github.io/media/css/day.css";
       
@@ -96,12 +96,6 @@ window.onload=getCSS();
 <li>
 	 
 	<a  href="/archives"> 归档</a></li>
-	
-    
-     			
-<li>
-	 
-	<a  href="/tags"> 标签</a></li>
 	
     
      			
@@ -179,7 +173,7 @@ window.onload=getCSS();
 		</div>
 
 		<div class="entry-summary jia">
-			<p>空白处,测试评论
+			<p>空白处,测试评论,欢迎大家留言测试!
 </p>
 			<p class="readmore">
 				<a href="https://mbkotori.github.io/post/ping-lun-ce-shi/" class="link-more">Read more</a>
