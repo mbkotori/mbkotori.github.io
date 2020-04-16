@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>mbkotori&apos;s blog</title>
-    <updated>2020-04-16T16:43:46.421Z</updated>
+    <updated>2020-04-16T16:56:46.204Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -11,7 +11,14 @@
     <icon>https://mbkotori.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, mbkotori&apos;s blog</rights>
     <entry>
-        <title type="html"><![CDATA[关于作者,和这个blog(需要评论请务必阅读该文!)]]></title>
+        <title type="html"><![CDATA[评论测试]]></title>
+        <id>https://mbkotori.github.io/post/ping-lun-ce-shi/</id>
+        <link href="https://mbkotori.github.io/post/ping-lun-ce-shi/">
+        </link>
+        <updated>2020-04-16T16:50:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于作者,和这个blog]]></title>
         <id>https://mbkotori.github.io/post/about/</id>
         <link href="https://mbkotori.github.io/post/about/">
         </link>
