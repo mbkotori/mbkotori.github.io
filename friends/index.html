@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,7 +6,7 @@
 <meta name="keywords" content=" ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    关于作者,和这个blog | mbkotori&#39;s blog
+    友链 | mbkotori&#39;s blog
 </title>
 
 
@@ -38,26 +37,13 @@
 
 
 
-
-        
-                <!-- 没开启静态资源加速 -->
-                <script>
-                    $(document).ready(function() {
-                        /**
-                         * 给文章的图片添加放大效果
-                         */
-                        var link;
-                        $(".post_content img").each(function() {
-                            link = $(this).attr("src");
-                            $(this).wrap("<a href=\"" + link + "\"rel =\"gallery\"></a>")
-                        })
-                    })
-                </script>
-                
+    <!-- 防止浏览器缓存 -->
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
 </head>
 
 <body class="home blog custom-background round-avatars">
-    <!-- <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"></body> -->
     
         
             <div class="Yarn_Background" style="background-image: url( https://mbkotori.github.io/media/images/bg.jpg);"></div>
@@ -168,116 +154,35 @@
     </div>
 </header>
 
-        <!-- 图片放大开始 -->
 
-        <!-- 图片放大结束 -->
-        <div id="main" class="content">
-            <!-- 测试开始 -->
+    <div id="main" class="content">
+        <div class="container">
+            <style>
+                body.custom-background {
+                    background: #fff
+                }
 
-            <!-- 测试结束 -->
-            <!-- 文章开始 -->
-            <div class="container">
-                <article class="js-gallery post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                    <style>
-                        .container {
-                            padding: 10px 0px;
-                        }
-                        
-                        .post {
-                            margin: 0 auto
-                        }
-                    </style>
-
-                    <section class="post_content">
-                        <header class="post_header">
-                            <h1 class="post_title yellow-under">
-                                关于作者,和这个blog
-                            </h1>
-                        </header>
-                        <div class="post-body js-gallery">
-                            <h1 id="关于本站">🏠 关于本站</h1>
-<p>本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.<br>
-一开始考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.</p>
-<h1 id="博客内容">👨‍💻 博客内容</h1>
-<p>主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审核范围,大家辩证阅读即可).<br>
-个人更新时间不定,有兴趣的话题可以在留言区提出,有机会整理出来和大家一起分享.</p>
-<h1 id="和我联系">📬 和我联系</h1>
-<p>本来是想使用Gittalk作为blog的评论系统,但是考虑到需要登陆github还是有点麻烦的,另外gittalk也存在一定的安全隐患.网站也需要一个图床来存图,索性使用了一个折衷的方案.(无利益相关)<br>
-网盘既可以作为图床,也有着一个简易的留言板可以作为评论区来供大家联系我,我会定期在上面进行回复,留言区限制1K条信息所以不重要的或者已解决的会删除.<br>
-这是 <a href="http://mbkotori.ys168.com">我们的评论系统</a>,大家有问题可以在这里留言<br>
-<img src="http://ys-f.ys168.com/614621440/m524H6H26JKM6Hkrcmun/%E8%AF%84%E8%AE%BA.png" alt="评论系统图片" loading="lazy"></p>
-<h3 id="2020416-更新">2020/4/16 更新</h3>
-<p>因为有朋友提出Disqus还是可以在翻墙后使用的,试着配置了一下,不过发现搭载后网页加载速度明显变慢,故放弃(为了一两个评论拖慢大家阅读速度感觉不是很能接受ORZ),故放弃<br>
-或许以后修改网站结构的时候会再加上一个合适的评论系统吧~</p>
-<h3 id="2020417更新">2020/4/17更新</h3>
-<p>使用Valine制作了一个评论系统,不过还在测试阶段,如果可以的话就继续这样使用了,大家遇到问题多提意见,我好进行相应修改!</p>
-
-
-                        </div>
-                        <!-- Tips开始 -->
-                        
-                                <!-- Tips结束 -->
-                                <!-- 文章底部信息开始 -->
-                                <div class="meta split split--responsive cf">
-                                    <div class="split__title">
-                                        <time>2020-04-15</time>
-                                        
-                                                    
-                                                        <a href="https://mbkotori.github.io/tag/notice/" class="autotag">
-                #公告
-              </a>
-                                                        
-                                    </div>
-                                    <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
-                                    <div class="slide">
-                                        <a class="btn-slide" title="switch down"><i class="fa fa-chevron-down"></i>折叠评论区</a>
-                                    </div>
-                                </div>
-                                <!-- 文章底部信息结束 -->
-                    </section>
-                </article>
-            </div>
-            <!-- 分享开始 -->
-            <svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-            <div id="social">
-                <ul>
-                    <li>
-                        <a id="qzoneShare" href="javascript:void(0)" target="_blank"><i class="fa fa-tencent-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="weiboShare" href="javascript:void(0)" title="weibo" target="_blank"><i
-              class="fa fa-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="qqShare" href="javascript:void(0)" target="_blank"><i class="fa fa-qq fa-lg"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 分享结束 -->
-            <!-- 文章结束 -->
-
-            <!-- 上下一篇文章开始 -->
-            <!-- 如果有图片展示文章封面，如果没有图片展示默认图片 -->
-            <div class="navpost-part">
-                <div id="NextPrevPosts" style="display: block;">
+                .container {
+                    padding: 10px 0px;
+                }
+            </style>
+            <section class="post_content">
+                <div class="links">
+                    <h3 class="catalog-title">我的邻居</h3>
+                    <div class="catalog-description"></div>
+                    <!-- <div class="catalog-share">4 items in collection</div> -->
+                    <!-- 提示开始 -->
                     
-                        <div class="prev aos-init aos-animate" data-aos="slide-right" data-aos-delay="1.5s">
-                            <div class="arrow"><i class="fa fa-angle-double-left"></i>
-                            </div>
-                            <div class="preview">
-                                
-                                        <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
-                                        
-                                            <a class="pull-left preview-content bold" href="https://mbkotori.github.io/post/ping-lun-ce-shi/"><span>评论测试</span></a>
-                            </div>
-                        </div>
+                    <!-- 提示结束 -->
+
+                    <!-- 友链开始 -->
+                    <div class="userItems">
                         
-                            
-            </div>
-            <!-- 上下一篇文章结束 -->
-            <!-- 评论区开始 -->
+                        <!-- 友链结束 -->
+
+                    </div>
+                </div>
+            </section>
             <div id="panel" style="display: block;">
     <div class="comment-area">
       <section class="comments">
@@ -307,9 +212,10 @@
       </section>
     </div>
   </div>
-                <!-- 评论区结束 -->
         </div>
-        
+    </div>
+
+    
 
   
 
@@ -346,29 +252,7 @@
         <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
     </div>
 </footer>
-            <script>
-    /* 分享代码 */
-    var feature = "http://ys-c.ys168.com/83311221/jUvxmnr2K381K785JOmuh/lu16.jpg";
-    if(feature == ""){
-      feature = "https://mbkotori.github.io/favicon.ico";
-    }
-      $("#weiboShare").click(function(){
-        var url = "http://v.t.sina.com.cn/share/share.php?title=" + document.title + "&url=" + document.url + "&pic=" + feature;
-        window.open(url);
-      })
-      $("#qqShare").click(function () {
-        var url = "http://connect.qq.com/widget/shareqq/index.html?url="+ document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-        window.open(url);
-        })
-        $("#qzoneShare").click(function () {
-          var url = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-          window.open(url);
-      })
-  </script>
 
-                <!-- 测试代码开始 -->
-
-                <!-- 测试代码结束 -->
 </body>
 
 </html>

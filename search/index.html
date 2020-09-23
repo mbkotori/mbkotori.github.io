@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -7,7 +7,7 @@
 <meta name="keywords" content=" ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    评论测试 | mbkotori&#39;s blog
+    mbkotori&#39;s blog
 </title>
 
 
@@ -38,26 +38,15 @@
 
 
 
-
-        
-                <!-- 没开启静态资源加速 -->
-                <script>
-                    $(document).ready(function() {
-                        /**
-                         * 给文章的图片添加放大效果
-                         */
-                        var link;
-                        $(".post_content img").each(function() {
-                            link = $(this).attr("src");
-                            $(this).wrap("<a href=\"" + link + "\"rel =\"gallery\"></a>")
-                        })
-                    })
-                </script>
-                
+    <script src="https://mbkotori.github.io/media/gridea-search/fuse.basic.min.js"></script>
+    <script src="https://mbkotori.github.io/media/gridea-search/ejs.min.js"></script>
+    <script src="https://mbkotori.github.io/media/gridea-search/gridea-search.js"></script>
+    <script src="https://mbkotori.github.io/media/gridea-search/result-template.ejs" type="text/ejs"></script>
 </head>
 
+
+
 <body class="home blog custom-background round-avatars">
-    <!-- <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"></body> -->
     
         
             <div class="Yarn_Background" style="background-image: url( https://mbkotori.github.io/media/images/bg.jpg);"></div>
@@ -168,134 +157,20 @@
     </div>
 </header>
 
-        <!-- 图片放大开始 -->
-
-        <!-- 图片放大结束 -->
-        <div id="main" class="content">
-            <!-- 测试开始 -->
-
-            <!-- 测试结束 -->
-            <!-- 文章开始 -->
-            <div class="container">
-                <article class="js-gallery post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                    <style>
-                        .container {
-                            padding: 10px 0px;
-                        }
-                        
-                        .post {
-                            margin: 0 auto
-                        }
-                    </style>
-
-                    <section class="post_content">
-                        <header class="post_header">
-                            <h1 class="post_title yellow-under">
-                                评论测试
-                            </h1>
-                        </header>
-                        <div class="post-body js-gallery">
-                            <p>空白处,测试评论,欢迎大家留言测试!</p>
-
-
-                        </div>
-                        <!-- Tips开始 -->
-                        
-                                <!-- Tips结束 -->
-                                <!-- 文章底部信息开始 -->
-                                <div class="meta split split--responsive cf">
-                                    <div class="split__title">
-                                        <time>2020-04-17</time>
-                                        
-                                                    
-                                                        <a href="https://mbkotori.github.io/tag/DeepLearning/" class="autotag">
-                #深度学习
-              </a>
-                                                        
-                                    </div>
-                                    <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
-                                    <div class="slide">
-                                        <a class="btn-slide" title="switch down"><i class="fa fa-chevron-down"></i>折叠评论区</a>
-                                    </div>
-                                </div>
-                                <!-- 文章底部信息结束 -->
-                    </section>
-                </article>
-            </div>
-            <!-- 分享开始 -->
-            <svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-            <div id="social">
-                <ul>
-                    <li>
-                        <a id="qzoneShare" href="javascript:void(0)" target="_blank"><i class="fa fa-tencent-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="weiboShare" href="javascript:void(0)" title="weibo" target="_blank"><i
-              class="fa fa-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="qqShare" href="javascript:void(0)" target="_blank"><i class="fa fa-qq fa-lg"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 分享结束 -->
-            <!-- 文章结束 -->
-
-            <!-- 上下一篇文章开始 -->
-            <!-- 如果有图片展示文章封面，如果没有图片展示默认图片 -->
-            <div class="navpost-part">
-                <div id="NextPrevPosts" style="display: block;">
-                    
-                            
-                                <div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
-                                    <div class="arrow"><i class="fa fa-angle-double-right"></i></div>
-                                    <div class="preview">
-                                        
-                                            <div class="pull-left featuredImg" style="background-image:url(http://ys-c.ys168.com/83311221/jUvxmnr2K381K785JOmuh/lu16.jpg);"></div>
-                                            
-                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/about/"><span>
-                关于作者,和这个blog</span></a>
-                                    </div>
-                                </div>
+    <div id="main" class="content">
+        <div class="container">
+            <article itemscope="itemscope">
+                <div class="main animated">
+                    <div id="gridea-search-result" data-update="1600827638665">
+                        <div class="searching">搜索中......</div>
+                        <div class="no-result" style="display:none;text-align: center;">未搜索到相关文章</div>
+                    </div>
                 </div>
-                
-            </div>
-            <!-- 上下一篇文章结束 -->
-            <!-- 评论区开始 -->
-            <div id="panel" style="display: block;">
-    <div class="comment-area">
-      <section class="comments">
-        <div class="comments-main">
-          
-          
-          <div id="gitalk-container"></div>
-          <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: '54e625d76ee66c5e4dda',
-            clientSecret: '5a7c8f57166925176b5740a98304d97987e23054',
-            repo: 'mbkotori.github.io',
-            owner: 'mbkotori',
-            admin: ['mbkotori'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
-
-        gitalk.render('gitalk-container')
-    }
-</script>
-          
-          
-          
+            </article>
         </div>
-      </section>
     </div>
-  </div>
-                <!-- 评论区结束 -->
-        </div>
-        
+    
+    
 
   
 
@@ -332,29 +207,8 @@
         <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
     </div>
 </footer>
-            <script>
-    /* 分享代码 */
-    var feature = "";
-    if(feature == ""){
-      feature = "https://mbkotori.github.io/favicon.ico";
-    }
-      $("#weiboShare").click(function(){
-        var url = "http://v.t.sina.com.cn/share/share.php?title=" + document.title + "&url=" + document.url + "&pic=" + feature;
-        window.open(url);
-      })
-      $("#qqShare").click(function () {
-        var url = "http://connect.qq.com/widget/shareqq/index.html?url="+ document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-        window.open(url);
-        })
-        $("#qzoneShare").click(function () {
-          var url = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-          window.open(url);
-      })
-  </script>
 
-                <!-- 测试代码开始 -->
-
-                <!-- 测试代码结束 -->
 </body>
+
 
 </html>
