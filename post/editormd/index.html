@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,7 +7,7 @@
 <meta name="keywords" content="坚持,探索,求解 ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    友链 | mbkotori&#39;s blog
+    Editor.md | mbkotori&#39;s blog
 </title>
 
 
@@ -49,13 +50,26 @@
     gtag('config', 'UA-163768081-1');
 </script>
 
-    <!-- 防止浏览器缓存 -->
-<meta http-equiv="pragma" content="no-cache"> 
-<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
-<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+
+        
+                <!-- 没开启静态资源加速 -->
+                <script>
+                    $(document).ready(function() {
+                        /**
+                         * 给文章的图片添加放大效果
+                         */
+                        var link;
+                        $(".post_content img").each(function() {
+                            link = $(this).attr("src");
+                            $(this).wrap("<a href=\"" + link + "\"rel =\"gallery\"></a>")
+                        })
+                    })
+                </script>
+                
 </head>
 
 <body class="home blog custom-background round-avatars">
+    <!-- <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"></body> -->
     
     <div class="Yarn_Background" style="background-image: url(http://ys-j.ys168.com/614621412/s635F3M744INK4kofntj/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);"></div>
      
@@ -164,56 +178,119 @@
     </div>
 </header>
 
+        <!-- 图片放大开始 -->
 
-    <div id="main" class="content">
-        <div class="container">
-            <style>
-                body.custom-background {
-                    background: #fff
-                }
+        <!-- 图片放大结束 -->
+        <div id="main" class="content">
+            <!-- 测试开始 -->
 
-                .container {
-                    padding: 10px 0px;
-                }
-            </style>
-            <section class="post_content">
-                <div class="links">
-                    <h3 class="catalog-title">我的邻居</h3>
-                    <div class="catalog-description"></div>
-                    <!-- <div class="catalog-share">4 items in collection</div> -->
-                    <!-- 提示开始 -->
-                    
-                    <!-- 提示结束 -->
-
-                    <!-- 友链开始 -->
-                    <div class="userItems">
+            <!-- 测试结束 -->
+            <!-- 文章开始 -->
+            <div class="container">
+                <article class="js-gallery post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+                    <style>
+                        .container {
+                            padding: 10px 0px;
+                        }
                         
+                        .post {
+                            margin: 0 auto
+                        }
+                    </style>
+
+                    <section class="post_content">
+                        <header class="post_header">
+                            <h1 class="post_title yellow-under">
+                                Editor.md
+                            </h1>
+                        </header>
+                        <div class="post-body js-gallery">
+                            <link rel="stylesheet" href="editormd/css/editormd.css" />
+<div id="test-editor">
+    <textarea style="display:none;">### 关于 Editor.md
+<p><strong>Editor.md</strong> 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。<br>
+</textarea></p>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="editormd/editormd.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("test-editor", {
+            // width  : "100%",
+            // height : "100%",
+            path   : "editormd/lib/"
+        });
+    });
+</script>
+
+                        </div>
+                        <!-- Tips开始 -->
                         
-                        <div class="userItem">
-                            <div class="userItem--inner">
-                                <div class="userItem-content">
-                                    <!-- 如果没有设置友链图片展示默认网站图片 -->
-                                    
-                                    <a href="https://www.601b.codes/"><img src="http://ys-c.ys168.com/614621417/kofntjo853G5J6S38PL/avatar.png"
-                                            class="avatar photo" height="64" width="64"></a>
-                                    
-                                    <div class="userItem-name">
-                                        <a class="link link--primary" href="https://www.601b.codes/"
-                                            target="_blank">P某的备忘录</a>
+                            <hr>
+                            <div class="alerts success"><i class="fa fa-warning"><strong>NOTE:</strong></i>
+                                禁止转载,特殊需要可联系作者
+                            </div>
+
+                            
+                                <!-- Tips结束 -->
+                                <!-- 文章底部信息开始 -->
+                                <div class="meta split split--responsive cf">
+                                    <div class="split__title">
+                                        <time>2020-10-07</time>
+                                        
+                                                    
                                     </div>
-                                    <div class="blog-description">
-                                        人事を尽くして天命を待つ！
+                                    <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
+                                    <div class="slide">
+                                        <a class="btn-slide" title="switch down"><i class="fa fa-chevron-down"></i>折叠评论区</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- 友链结束 -->
+                                <!-- 文章底部信息结束 -->
+                    </section>
+                </article>
+            </div>
+            <!-- 分享开始 -->
+            <svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+      <path d="M0 0 L50 100 L100 0 Z"></path>
+    </svg>
+            <div id="social">
+                <ul>
+                    <li>
+                        <a id="qzoneShare" href="javascript:void(0)" target="_blank"><i class="fa fa-tencent-weibo fa-lg"></i></a>
+                    </li>
+                    <li>
+                        <a id="weiboShare" href="javascript:void(0)" title="weibo" target="_blank"><i
+              class="fa fa-weibo fa-lg"></i></a>
+                    </li>
+                    <li>
+                        <a id="qqShare" href="javascript:void(0)" target="_blank"><i class="fa fa-qq fa-lg"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 分享结束 -->
+            <!-- 文章结束 -->
 
-                    </div>
+            <!-- 上下一篇文章开始 -->
+            <!-- 如果有图片展示文章封面，如果没有图片展示默认图片 -->
+            <div class="navpost-part">
+                <div id="NextPrevPosts" style="display: block;">
+                    
+                            
+                                <div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
+                                    <div class="arrow"><i class="fa fa-angle-double-right"></i></div>
+                                    <div class="preview">
+                                        
+                                                <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
+                                                
+                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/ping-lun-ce-shi/"><span>
+                评论测试</span></a>
+                                    </div>
+                                </div>
                 </div>
-            </section>
+                
+            </div>
+            <!-- 上下一篇文章结束 -->
+            <!-- 评论区开始 -->
             <div id="panel" style="display: block;">
     <div class="comment-area">
       <section class="comments">
@@ -243,10 +320,9 @@
       </section>
     </div>
   </div>
+                <!-- 评论区结束 -->
         </div>
-    </div>
-
-    
+        
 <div id="backToTop" style="display: block;">
     <img src="https://moguos.oss-cn-shenzhen.aliyuncs.com/boxmoe/assets/images/top/lolisister1.gif">
 </div>
@@ -306,7 +382,29 @@
         <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
     </div>
 </footer>
+            <script>
+    /* 分享代码 */
+    var feature = "";
+    if(feature == ""){
+      feature = "https://mbkotori.github.io/favicon.ico";
+    }
+      $("#weiboShare").click(function(){
+        var url = "http://v.t.sina.com.cn/share/share.php?title=" + document.title + "&url=" + document.url + "&pic=" + feature;
+        window.open(url);
+      })
+      $("#qqShare").click(function () {
+        var url = "http://connect.qq.com/widget/shareqq/index.html?url="+ document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
+        window.open(url);
+        })
+        $("#qzoneShare").click(function () {
+          var url = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
+          window.open(url);
+      })
+  </script>
 
+                <!-- 测试代码开始 -->
+
+                <!-- 测试代码结束 -->
 </body>
 
 </html>
