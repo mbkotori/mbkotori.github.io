@@ -13,7 +13,7 @@
 
 
     <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1602034767146">
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1602221820578">
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
@@ -152,7 +152,7 @@
         <a href="">
             <figure>
                 
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1602034767146" />
+                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1602221820578" />
                     
             </figure>
         </a>
@@ -225,7 +225,38 @@ SISR-直接将低分辨率LR图转成高分辨率HR图(单进单出siso),不像�
 3.提出RFANet,基于RFA和ESA模块进行构建</p>
 <p>realated work<br>
 sub-pixel conv:子像素卷积,超分辨率中常用的upscale方法<br>
-https://oldpan.me/archives/upsample-convolve-efficient-sub-pixel-convolutional-layers</p>
+https://oldpan.me/archives/upsample-convolve-efficient-sub-pixel-convolutional-layers<br>
+[后续可能会出这篇文章的内容,我还没读但是看起来很有意思,他和deconv方法的不同也可以考虑进去,另一点是他能应用在SR上能不能应用在分割上,做一下考虑]</p>
+<p>{读图figure2}<br>
+基础的SR模型,卷积+多个设计好的模块+反卷积+卷积回复通道数?</p>
+<p>基于注意力的网络模型</p>
+<p>3.methodology<br>
+3.1 SR的简单网络结构<br>
+看作三部分:<br>
+头部:负责一个卷积层的初始特征提取,得到浅层特征F0<br>
+躯干:输入是提取到的特征F0,连接到T个basemodule的复读模式{公式2}<br>
+重建restore:将上面提取的(深层特征Ft和浅层特征F0)融合,进行放大[全局残差学习可以减轻训练难度]<br>
+upsample模块是重建中的关键部分,使用子像素卷积</p>
+<p>损失函数用L1 loss(改损失函数或许是一个很好的改进切入点)</p>
+<p>3.2 残差特征聚合模块<br>
+残差模块包含双分支(1)残差块(2)身份块?(identity branch)<br>
+前面的残差块提取的信息很难被利用-&gt;因为它需要很长路径到达最后的卷积运算<br>
+-&gt;改进[直接将每个块的残差特征concat到一起]<br>
+-&gt;concat后用1x1卷积融合他们的特征哦(这个东西可不仅仅是降维减通道)</p>
+<p>这样的连接,不用让前面的残差信息受损或干扰-&gt;得到更具有区分性的特征表达(?)</p>
+<p>RFA可以看作一个独立模块,这也意味着我们可以把它和其他模块连接(模块复读和不同模块组合,哪个效果会好一些呢)</p>
+<p>3.3 增强的空间注意力模块<br>
+{读图figure4}<br>
+左侧是ESAblock的形状,右侧是ESAblock中的ESA机制(mechanism)<br>
+仔细看ESA机制,对其做一个解释</p>
+<p>ESA块放到残差块的末尾来起作用,注意力机制本质(改天可以再写一篇文章),集中体现残差特征<br>
+同时考虑到该ESA块要被连接到你后面的每个残差块,尽量不要做得太臃肿<br>
+为了完成图像SR任务,应设计一个具有较大感受野的模块(?此处没有理解.关于感受野下次可以再写一篇)</p>
+<p>解决方法也很简单:1x1卷积降维减参数+步长卷积增大感受野<br>
+注意这里,描述的是strided conv(步长卷积)而不是dilated conv,这两者存在区别(可以详细写一下)</p>
+<p>跨步卷积搭配池化使用#为什么/原因.可以详细描述一下</p>
+<p><strong>这里提到的:&quot;抛去计算量考虑,实现空间注意力块的更好方法是使用非本地模块(Non-local block)&quot;我没get到这个部分,之后要详细看一下他这里参考的两篇论文</strong></p>
+<p>3.4 实施细节</p>
 
 
                         </div>
