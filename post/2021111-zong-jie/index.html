@@ -13,7 +13,7 @@
 
 
     <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610451549879">
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610451688375">
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
@@ -152,7 +152,7 @@
         <a href="">
             <figure>
                 
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610451549879" />
+                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610451688375" />
                     
             </figure>
         </a>
@@ -205,20 +205,20 @@
                             </h1>
                         </header>
                         <div class="post-body js-gallery">
-                            <h1 id="pytorch各个损失函数都有自己的前提有时候不能混用">pytorch各个损失函数都有自己的前提，有时候不能混用，</h1>
+                            <h1 id="1pytorch各个损失函数都有自己的前提有时候不能混用">1.pytorch各个损失函数都有自己的前提，有时候不能混用，</h1>
 <p>举例：CrossEntropyLoss，该函数进行验证时label必须是以0开始的，即<br>
 classes=【0，1，2，3】<br>
 否则报错：Assertion `cur_target &gt;= 0 &amp;&amp; cur_target &lt; n_classes’ failed.</p>
-<h1 id="数据选择转换格式时是dtype而不是detype注意拼写">数据选择转换格式时是：dtype而不是detype，注意拼写</h1>
-<h1 id="多分类时使用npargmax返回numpy数组中最大值的索引根据索引即可代表网络最后给该像素的类型值">多分类时使用np.argmax（），返回numpy数组中最大值的索引，根据索引即可代表网络最后给该像素的类型值</h1>
-<h1 id="代码未完全确认可以使用时优先构建小数据集来快速验证可行性不要出现今天这种跑了4k数据才发现eval模块出错的情况">代码未完全确认可以使用时，优先构建小数据集来快速验证可行性，不要出现今天这种跑了4k数据才发现eval模块出错的情况</h1>
-<h1 id="softmax和sigmoid">softmax和sigmoid：</h1>
+<h1 id="2数据选择转换格式时是dtype而不是detype注意拼写">2.数据选择转换格式时是：dtype而不是detype，注意拼写</h1>
+<h1 id="3多分类时使用npargmax返回numpy数组中最大值的索引根据索引即可代表网络最后给该像素的类型值">3.多分类时使用np.argmax（），返回numpy数组中最大值的索引，根据索引即可代表网络最后给该像素的类型值</h1>
+<h1 id="4代码未完全确认可以使用时优先构建小数据集来快速验证可行性不要出现今天这种跑了4k数据才发现eval模块出错的情况">4.代码未完全确认可以使用时，优先构建小数据集来快速验证可行性，不要出现今天这种跑了4k数据才发现eval模块出错的情况</h1>
+<h1 id="5softmax和sigmoid">5.softmax和sigmoid：</h1>
 <p>softmax用于多分类，把多个输出映射到（0，1）区间内且这些输出的结果和为1（满足概率的特性）<br>
 和上面联动：softmax后再使用argmax来找到某个概率值最大的分类索引，得到判断结果<br>
 sigmoid：注意，是sigmoid，不是sigmiod也不是sigmod，容易写错<br>
 sigmoid就是逻辑斯蒂函数，即logistic函数，把一个实数映射到（0，1）的区间，拿来做二分类，但是注意，你拿来做多分类也行，只是多分类的值相加，不会像softmax一样各分类总值相加为1，一般来说，拿来二分类还需要给他设置个阈值，将（0，1）的值映射成0/1或者0/255<br>
 另一个方法，二分类也是多分类，那你用softmax啊！但是这时候，你的网络输出应该是2层，即最后的out_channel=2，然后argmax取值作为分类，是个好办法</p>
-<h1 id="知乎说法">知乎说法：</h1>
+<h1 id="51-知乎说法">5.1 知乎说法：</h1>
 <p>sigmoid的优点在于输出范围有限，所以数据在传递的过程中不容易发散。当然也有相应的缺点，就是饱和的时候梯度太小。sigmoid还有一个优点是输出范围为(0, 1)，所以可以用作输出层，输出表示概率。评论中 @林孟潇指出了sigmoid的另一个优点：求导容易。<br>
 作者：王赟 Maigo<br>
 链接：https://www.zhihu.com/question/24259872/answer/82598145<br>
@@ -289,8 +289,8 @@ sigmoid就是逻辑斯蒂函数，即logistic函数，把一个实数映射到�
                                         
                                                 <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
                                                 
-                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/ping-lun-ce-shi/"><span>
-                评论测试</span></a>
+                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/"><span>
+                Residual Feature Aggregation Network for Image Super-Resolution</span></a>
                                     </div>
                                 </div>
                 </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>mbkotori&apos;s blog</title>
-    <updated>2021-01-12T11:39:14.733Z</updated>
+    <updated>2021-01-12T11:41:31.890Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -16,6 +16,13 @@
         <link href="https://mbkotori.github.io/post/2021111-zong-jie/">
         </link>
         <updated>2021-01-12T11:33:45.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Residual Feature Aggregation Network for Image Super-Resolution]]></title>
+        <id>https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/</id>
+        <link href="https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/">
+        </link>
+        <updated>2020-10-06T08:17:47.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[评论测试]]></title>
