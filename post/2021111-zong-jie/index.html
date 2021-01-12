@@ -7,7 +7,7 @@
 <meta name="keywords" content="坚持,探索,求解 ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    关于作者,和这个blog | mbkotori&#39;s blog
+    2021/1/11 总结 | mbkotori&#39;s blog
 </title>
 
 
@@ -201,30 +201,29 @@
                     <section class="post_content">
                         <header class="post_header">
                             <h1 class="post_title yellow-under">
-                                关于作者,和这个blog
+                                2021/1/11 总结
                             </h1>
                         </header>
                         <div class="post-body js-gallery">
-                            <h1 id="关于本站">🏠 关于本站</h1>
-<p>本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.<br>
-一开始考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.</p>
-<h1 id="博客内容">👨‍💻 博客内容</h1>
-<p>主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审核范围,大家辩证阅读即可).<br>
-个人更新时间不定,有兴趣的话题可以在留言区提出,有机会整理出来和大家一起分享.</p>
-<h1 id="和我联系">📬 和我联系</h1>
-<p>本来是想使用Gittalk作为blog的评论系统,但是考虑到需要登陆github还是有点麻烦的,另外gittalk也存在一定的安全隐患.网站也需要一个图床来存图,索性使用了一个折衷的方案.(无利益相关)<br>
-网盘既可以作为图床,也有着一个简易的留言板可以作为评论区来供大家联系我,我会定期在上面进行回复,留言区限制1K条信息所以不重要的或者已解决的会删除.<br>
-这是 <a href="http://mbkotori.ys168.com">我们的评论系统</a>,大家有问题可以在这里留言<br>
-<img src="http://ys-f.ys168.com/614621440/m524H6H26JKM6Hkrcmun/%E8%AF%84%E8%AE%BA.png" alt="评论系统图片" loading="lazy"></p>
-<h3 id="2020416-更新">2020/4/16 更新</h3>
-<p>因为有朋友提出Disqus还是可以在翻墙后使用的,试着配置了一下,不过发现搭载后网页加载速度明显变慢,故放弃(为了一两个评论拖慢大家阅读速度感觉不是很能接受ORZ),故放弃<br>
-或许以后修改网站结构的时候会再加上一个合适的评论系统吧~</p>
-<h3 id="2020417更新">2020/4/17更新</h3>
-<p>使用Valine制作了一个评论系统,不过还在测试阶段,如果可以的话就继续这样使用了,大家遇到问题多提意见,我好进行相应修改!</p>
-<h3 id="2020923更新">2020/9/23更新</h3>
-<p>完全重置的网站,使用了新的模板Nature,该模板增加了搜索功能,并决定使用gitalk作为评论系统(最后还是用了最初的想法,大概是设计工作中永远的痛!)<br>
-当然,留言系统依然可以使用,方便不适用gitalk或者不想登陆的朋友!<br>
-离研究生生涯越来越近,最近可能会抽时间去写几篇堆积很久的稿子,希望继续顺利,可以研究更多感兴趣的东西!</p>
+                            <h1 id="pytorch各个损失函数都有自己的前提有时候不能混用">pytorch各个损失函数都有自己的前提，有时候不能混用，</h1>
+<p>举例：CrossEntropyLoss，该函数进行验证时label必须是以0开始的，即<br>
+classes=【0，1，2，3】<br>
+否则报错：Assertion `cur_target &gt;= 0 &amp;&amp; cur_target &lt; n_classes’ failed.</p>
+<h1 id="数据选择转换格式时是dtype而不是detype注意拼写">数据选择转换格式时是：dtype而不是detype，注意拼写</h1>
+<h1 id="多分类时使用npargmax返回numpy数组中最大值的索引根据索引即可代表网络最后给该像素的类型值">多分类时使用np.argmax（），返回numpy数组中最大值的索引，根据索引即可代表网络最后给该像素的类型值</h1>
+<h1 id="代码未完全确认可以使用时优先构建小数据集来快速验证可行性不要出现今天这种跑了4k数据才发现eval模块出错的情况">代码未完全确认可以使用时，优先构建小数据集来快速验证可行性，不要出现今天这种跑了4k数据才发现eval模块出错的情况</h1>
+<h1 id="softmax和sigmoid">softmax和sigmoid：</h1>
+<p>softmax用于多分类，把多个输出映射到（0，1）区间内且这些输出的结果和为1（满足概率的特性）<br>
+和上面联动：softmax后再使用argmax来找到某个概率值最大的分类索引，得到判断结果<br>
+sigmoid：注意，是sigmoid，不是sigmiod也不是sigmod，容易写错<br>
+sigmoid就是逻辑斯蒂函数，即logistic函数，把一个实数映射到（0，1）的区间，拿来做二分类，但是注意，你拿来做多分类也行，只是多分类的值相加，不会像softmax一样各分类总值相加为1，一般来说，拿来二分类还需要给他设置个阈值，将（0，1）的值映射成0/1或者0/255<br>
+另一个方法，二分类也是多分类，那你用softmax啊！但是这时候，你的网络输出应该是2层，即最后的out_channel=2，然后argmax取值作为分类，是个好办法</p>
+<h1 id="知乎说法">知乎说法：</h1>
+<p>sigmoid的优点在于输出范围有限，所以数据在传递的过程中不容易发散。当然也有相应的缺点，就是饱和的时候梯度太小。sigmoid还有一个优点是输出范围为(0, 1)，所以可以用作输出层，输出表示概率。评论中 @林孟潇指出了sigmoid的另一个优点：求导容易。<br>
+作者：王赟 Maigo<br>
+链接：https://www.zhihu.com/question/24259872/answer/82598145<br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
 
                         </div>
@@ -240,9 +239,13 @@
                                 <!-- 文章底部信息开始 -->
                                 <div class="meta split split--responsive cf">
                                     <div class="split__title">
-                                        <time>2020-04-15</time>
+                                        <time>2021-01-12</time>
                                         
                                                     
+                                                        <a href="https://mbkotori.github.io/tag/daily/" class="autotag">
+                #每日总结
+              </a>
+                                                        
                                     </div>
                                     <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
                                     <div class="slide">
@@ -279,18 +282,19 @@
             <div class="navpost-part">
                 <div id="NextPrevPosts" style="display: block;">
                     
-                        <div class="prev aos-init aos-animate" data-aos="slide-right" data-aos-delay="1.5s">
-                            <div class="arrow"><i class="fa fa-angle-double-left"></i>
-                            </div>
-                            <div class="preview">
-                                
-                                        <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
-                                        
-                                            <a class="pull-left preview-content bold" href="https://mbkotori.github.io/post/ping-lun-ce-shi/"><span>评论测试</span></a>
-                            </div>
-                        </div>
-                        
                             
+                                <div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
+                                    <div class="arrow"><i class="fa fa-angle-double-right"></i></div>
+                                    <div class="preview">
+                                        
+                                                <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
+                                                
+                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/ping-lun-ce-shi/"><span>
+                评论测试</span></a>
+                                    </div>
+                                </div>
+                </div>
+                
             </div>
             <!-- 上下一篇文章结束 -->
             <!-- 评论区开始 -->
