@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="description" content="研究路途中的记录 " />
 <meta name="keywords" content="坚持,探索,求解 ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    每日总结 | mbkotori&#39;s blog
+    2021/1/16 | mbkotori&#39;s blog
 </title>
 
 
@@ -28,6 +29,12 @@
 
 
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+
+
 
 
 
@@ -43,14 +50,27 @@
     gtag('config', 'UA-163768081-1');
 </script>
 
-  <!-- 防止浏览器缓存 -->
-<meta http-equiv="pragma" content="no-cache"> 
-<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
-<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+
+        
+                <!-- 没开启静态资源加速 -->
+                <script>
+                    $(document).ready(function() {
+                        /**
+                         * 给文章的图片添加放大效果
+                         */
+                        var link;
+                        $(".post_content img").each(function() {
+                            link = $(this).attr("src");
+                            $(this).wrap("<a href=\"" + link + "\"rel =\"gallery\"></a>")
+                        })
+                    })
+                </script>
+                
 </head>
 
 <body class="home blog custom-background round-avatars">
-  
+    <!-- <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"></body> -->
+    
     <div class="Yarn_Background" style="background-image: url(https://imgchr.com/i/sD8qaD);"></div>
      
     <!-- 搜索开始 -->
@@ -158,44 +178,154 @@
     </div>
 </header>
 
-  <div id="main" class="content">
-    <div class="container">
-      <section class="post_content">
-        <h3 class="catalog-title yellow-under" style="margin-bottom: 5%;">当前标签：每日总结 </h3>
-        
+        <!-- 图片放大开始 -->
+
+        <!-- 图片放大结束 -->
+        <div id="main" class="content">
+            <!-- 测试开始 -->
+
+            <!-- 测试结束 -->
+            <!-- 文章开始 -->
+            <div class="container">
+                <article class="js-gallery post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+                    <style>
+                        .container {
+                            padding: 10px 0px;
+                        }
+                        
+                        .post {
+                            margin: 0 auto
+                        }
+                    </style>
+
+                    <section class="post_content">
+                        <header class="post_header">
+                            <h1 class="post_title yellow-under">
+                                2021/1/16
+                            </h1>
+                        </header>
+                        <div class="post-body js-gallery">
+                            <h1 id="tensor和numpy转换">tensor和numpy转换</h1>
+<p>使用numpy()和from_numpy()相互转换,这两函数生成结果和源数据是共享内存的(速度快,但是改变一个另一个也改变)</p>
+<p>另一方法是torch.tensor(),该方法是先数据拷贝,时间空间消耗大,也不共享内存</p>
+<p>除了CharTensor外,所有在CPU上的tensor都可以和numpy数组转换<br>
+(感想:自由啊,回想起tensorflow中连print都打印不出内容的情况,pytorch某种程度上方便太多了!)</p>
+<p>用to()将tensor在GPU,CPU上移动,当然你得有gpu<br>
+指定device: <code>device = torch.device('cuda')</code><br>
+移动: <code>x=x.to(device)</code><br>
+这就把实现了一次移动</p>
+<h1 id="autograd">autograd</h1>
+<p>这个包能根据输入和前向传播自动构建计算图和执行反向传播<br>
+核心类:tensor<br>
+将属性<code>.requires_grad</code>设置<code>True</code>就会追踪<code>tensor</code>的操作(那么就可以利用链式法则进行梯度传播),调用<code>.backward()</code>完成梯度计算,<code>tensor</code>的梯度会积累到<code>.grad</code>属性中<br>
+如果要取消追踪,就要调用.<code>detach()</code>从追踪记录分离,也可以使用<code>with torch.no_grad()</code>将不想追踪的代码包裹起来,这在评估模型(eval)时很有用</p>
+<p>补充资料:PyTorch 的 backward 为什么有一个 grad_variables 参数？<br>
+<a href="https://zhuanlan.zhihu.com/p/29923090">https://zhuanlan.zhihu.com/p/29923090</a></p>
+<pre><code>我觉得这部分我看的是挺头晕的,这部分的逻辑还是要再深入看看的
+</code></pre>
+<h1 id=""></h1>
 
 
-    <div class="post post-layout-list aos-init aos-animate shadow" data-aos="fade-up">
-        <div class="status_list_item icon_kyubo">
-            
-                    <div class="status_user" style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
-                 
-                <div class="status_section">
-                    <a href="https://mbkotori.github.io/post/2021111-zong-jie/" class="status_btn">2021/1/11 总结</a>
-                    <h5 class="review-item-creator"><b>发布日期：</b>2021-01-12</h5>
-                    
-                        <a href="https://mbkotori.github.io/tag/daily/" class="autotag">每日总结</a>
+                        </div>
+                        <!-- Tips开始 -->
                         
-                    
-                            <p class="section_p">1.pytorch各个损失函数都有自己的前提，有时候不能混用，
-举例：CrossEntropyLoss，该函数进行验证时label必须是以0开始的，即
-classes=【0，1，2，3】
-否则报错：Assertion `cur_target &amp;gt;= 0 &amp;amp;&amp;amp; cur_target &amp;lt; n_classes’ failed.
-2.数据选择转换格式时是：dtype而不是dety...</p>
-                        
-                </div>
+                            <hr>
+                            <div class="alerts success"><i class="fa fa-warning"><strong>NOTE:</strong></i>
+                                禁止转载,特殊需要可联系作者
+                            </div>
+
+                            
+                                <!-- Tips结束 -->
+                                <!-- 文章底部信息开始 -->
+                                <div class="meta split split--responsive cf">
+                                    <div class="split__title">
+                                        <time>2021-01-16</time>
+                                        
+                                                    
+                                    </div>
+                                    <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
+                                    <div class="slide">
+                                        <a class="btn-slide" title="switch down"><i class="fa fa-chevron-down"></i>折叠评论区</a>
+                                    </div>
+                                </div>
+                                <!-- 文章底部信息结束 -->
+                    </section>
+                </article>
             </div>
+            <!-- 分享开始 -->
+            <svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+      <path d="M0 0 L50 100 L100 0 Z"></path>
+    </svg>
+            <div id="social">
+                <ul>
+                    <li>
+                        <a id="qzoneShare" href="javascript:void(0)" target="_blank"><i class="fa fa-tencent-weibo fa-lg"></i></a>
+                    </li>
+                    <li>
+                        <a id="weiboShare" href="javascript:void(0)" title="weibo" target="_blank"><i
+              class="fa fa-weibo fa-lg"></i></a>
+                    </li>
+                    <li>
+                        <a id="qqShare" href="javascript:void(0)" target="_blank"><i class="fa fa-qq fa-lg"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 分享结束 -->
+            <!-- 文章结束 -->
+
+            <!-- 上下一篇文章开始 -->
+            <!-- 如果有图片展示文章封面，如果没有图片展示默认图片 -->
+            <div class="navpost-part">
+                <div id="NextPrevPosts" style="display: block;">
+                    
+                            
+                                <div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
+                                    <div class="arrow"><i class="fa fa-angle-double-right"></i></div>
+                                    <div class="preview">
+                                        
+                                                <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
+                                                
+                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/2021111-zong-jie/"><span>
+                2021/1/11 总结</span></a>
+                                    </div>
+                                </div>
+                </div>
+                
+            </div>
+            <!-- 上下一篇文章结束 -->
+            <!-- 评论区开始 -->
+            <div id="panel" style="display: block;">
+    <div class="comment-area">
+      <section class="comments">
+        <div class="comments-main">
+          
+          
+          <div id="gitalk-container"></div>
+          <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '54e625d76ee66c5e4dda',
+            clientSecret: '5a7c8f57166925176b5740a98304d97987e23054',
+            repo: 'mbkotori.github.io',
+            owner: 'mbkotori',
+            admin: ['mbkotori'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+          
+          
+          
         </div>
-    </div>
-    
-
-        
-
       </section>
-
     </div>
   </div>
-  
+                <!-- 评论区结束 -->
+        </div>
+        
 <div id="backToTop" style="display: block;">
     <img src="https://moguos.oss-cn-shenzhen.aliyuncs.com/boxmoe/assets/images/top/lolisister1.gif">
 </div>
@@ -255,7 +385,29 @@ classes=【0，1，2，3】
         <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
     </div>
 </footer>
+            <script>
+    /* 分享代码 */
+    var feature = "";
+    if(feature == ""){
+      feature = "https://mbkotori.github.io/favicon.ico";
+    }
+      $("#weiboShare").click(function(){
+        var url = "http://v.t.sina.com.cn/share/share.php?title=" + document.title + "&url=" + document.url + "&pic=" + feature;
+        window.open(url);
+      })
+      $("#qqShare").click(function () {
+        var url = "http://connect.qq.com/widget/shareqq/index.html?url="+ document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
+        window.open(url);
+        })
+        $("#qzoneShare").click(function () {
+          var url = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
+          window.open(url);
+      })
+  </script>
 
+                <!-- 测试代码开始 -->
+
+                <!-- 测试代码结束 -->
 </body>
 
 </html>
