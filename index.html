@@ -12,7 +12,7 @@
 
 
     <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610781626714">
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610782609277">
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
@@ -51,7 +51,7 @@
 
 <body class="home blog custom-background round-avatars">
     
-    <div class="Yarn_Background" style="background-image: url(https://imgchr.com/i/sD8qaD);"></div>
+    <div class="Yarn_Background" style="background-image: url(/media/images/bg.jpg);"></div>
      
     <!-- 搜索开始 -->
 
@@ -132,7 +132,7 @@
         <a href="">
             <figure>
                 
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610781626714" />
+                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610782609277" />
                     
             </figure>
         </a>
@@ -168,16 +168,40 @@
                 
 
 
+<div class="post post-layout-list aos-init aos-animate shadow" data-aos="fade-up">
+    <div class="status_list_item icon_kyubo">
+        
+                <div class="status_user"
+                    style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
+                    
+                        <div class="status_section">
+                            <a href="https://mbkotori.github.io/post/about/" class="status_btn">关于作者,和这个blog</a>
+                            <h5 class="review-item-creator"><b>发布日期：</b>2020-04-15</h5>
+                            
+                            
+                            <p class="section_p">🏠 关于本站
+本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.
+一开始考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.
+👨‍💻 博客内容
+主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审...</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
 <div class="post post-layout-list shadow" data-aos="fade-up">
     <div class="postnormal review ">
         <div class="post-container review-item">
             <div class="row review-item-wrapper">
                 <!-- 文章列表小图开始 -->
                 <div class="col-sm-3">
-                    <a rel="nofollow" href="https://mbkotori.github.io/post/about/">
+                    <a rel="nofollow" href="https://mbkotori.github.io/post/2021116/">
                         
-                            <div class="review-item-img"
-                            style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
+                        <div class="review-item-img"
+                            style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
                         </div>
                         
                     </a>
@@ -185,11 +209,13 @@
                 <!-- 文章列表小图结束 -->
                 <div class="col-sm-9 flex-xs-middle">
                     <div class="review-item-title">
-                        <a href="https://mbkotori.github.io/post/about/" rel="bookmark">关于作者,和这个blog</a>
+                        <a href="https://mbkotori.github.io/post/2021116/" rel="bookmark">2021/1/16</a>
                     </div>
-                    <div class="review-item-creator"><b>发布日期：</b>2020-04-15</div>
+                    <div class="review-item-creator"><b>发布日期：</b>2021-01-16</div>
                     <!-- <span class="review-item-info"><b>总浏览量：</b>1600 reads</span> -->
                     <!-- Tag -->
+                    
+                    <a href="https://mbkotori.github.io/tag/daily/" class="autotag">每日总结</a>
                     
 
                 </div>
@@ -198,23 +224,24 @@
             <div class="review-bg-wrapper">
                 
                 <div class="bg-blur"
-                    style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);"></div>
+                    style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
+                </div>
                 
             </div>
             <!-- 文章列表大图结束 -->
         </div>
         <div class="post-container">
             
-            <div class="entry-content">🏠 关于本站
-本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.
-一开始考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.
-👨‍💻 博客内容
-主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审...</div>
+            <div class="entry-content">tensor和numpy转换
+使用numpy()和from_numpy()相互转换,这两函数生成结果和源数据是共享内存的(速度快,但是改变一个另一个也改变)
+另一方法是torch.tensor(),该方法是先数据拷贝,时间空间消耗大,也不共享内存
+除了CharTensor外,所有在CPU上的tensor都可以和numpy数组转换
+(感想:自由啊,回想起tensorflow中连print都打印不出内...</div>
             
             <div class="post-footer">
-                <a class="gaz-btn primary" href="https://mbkotori.github.io/post/about/">READ MORE</a>
+                <a class="gaz-btn primary" href="https://mbkotori.github.io/post/2021116/">READ MORE</a>
                 <span class="total-comments-on-post pull-right"><a href=""><span class="valine-comment-count"
-                            data-xid="/post/about/"></span>
+                            data-xid="/post/2021116/"></span>
                         Comments</a></span> </div>
         </div>
     </div>
@@ -225,35 +252,9 @@
 <div class="post post-layout-list aos-init aos-animate shadow" data-aos="fade-up">
     <div class="status_list_item icon_kyubo">
         
-                    <div class="status_user"
-                        style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
-                        
-                        <div class="status_section">
-                            <a href="https://mbkotori.github.io/post/2021116/" class="status_btn">2021/1/16</a>
-                            <h5 class="review-item-creator"><b>发布日期：</b>2021-01-16</h5>
-                            
-                            <a href="https://mbkotori.github.io/tag/daily/" class="autotag">每日总结</a>
-                            
-                            
-                            <p class="section_p">tensor和numpy转换
-使用numpy()和from_numpy()相互转换,这两函数生成结果和源数据是共享内存的(速度快,但是改变一个另一个也改变)
-另一方法是torch.tensor(),该方法是先数据拷贝,时间空间消耗大,也不共享内存
-除了CharTensor外,所有在CPU上的tensor都可以和numpy数组转换
-(感想:自由啊,回想起tensorflow中连print都打印不出内...</p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-
-<div class="post post-layout-list aos-init aos-animate shadow" data-aos="fade-up">
-    <div class="status_list_item icon_kyubo">
-        
-                    <div class="status_user"
-                        style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
-                        
+                <div class="status_user"
+                    style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
+                    
                         <div class="status_section">
                             <a href="https://mbkotori.github.io/post/2021111-zong-jie/" class="status_btn">2021/1/11 总结</a>
                             <h5 class="review-item-creator"><b>发布日期：</b>2021-01-12</h5>
@@ -282,8 +283,8 @@ classes=【0，1，2，3】
                 <div class="col-sm-3">
                     <a rel="nofollow" href="https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/">
                         
-                            <div class="review-item-img"
-                            style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
+                        <div class="review-item-img"
+                            style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
                         </div>
                         
                     </a>
@@ -306,7 +307,8 @@ classes=【0，1，2，3】
             <div class="review-bg-wrapper">
                 
                 <div class="bg-blur"
-                    style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);"></div>
+                    style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
+                </div>
                 
             </div>
             <!-- 文章列表大图结束 -->
@@ -338,8 +340,8 @@ abstract:
                 <div class="col-sm-3">
                     <a rel="nofollow" href="https://mbkotori.github.io/post/ping-lun-ce-shi/">
                         
-                            <div class="review-item-img"
-                            style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);">
+                        <div class="review-item-img"
+                            style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
                         </div>
                         
                     </a>
@@ -362,7 +364,8 @@ abstract:
             <div class="review-bg-wrapper">
                 
                 <div class="bg-blur"
-                    style="background-image: url(https://mbkotori.github.io/media/images/post-list.jpg);"></div>
+                    style="background-image: url(http://ys-j.ys168.com/614621412/812514300/s635F3M744INK4kofntj34/OHR.SunlitScree_ZH-CN7556627842_1920x1080.jpg);">
+                </div>
                 
             </div>
             <!-- 文章列表大图结束 -->
