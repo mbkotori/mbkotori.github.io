@@ -13,7 +13,7 @@
 
 
     <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610940129838">
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1610951783260">
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
 <link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
@@ -152,7 +152,7 @@
         <a href="">
             <figure>
                 
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610940129838" />
+                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1610951783260" />
                     
             </figure>
         </a>
@@ -212,6 +212,21 @@
 <p>个人理解：nn.Module就是标准积木，现在我们的模型就是某个我们设计好的模型玩具，要想搭成这个玩具，我们先得从标准积木（nn.Module）中构建出我们要的指定模块(网络层)，最后forward方法就是自己搞出来的‘拼装手册’，怎么把我们的积木拼成我们的玩具。</p>
 <h3 id="想想8x8微型积木就好了">想想8x8微型积木就好了</h3>
 <figure data-type="image" tabindex="1"><img src="https://mbkotori.github.io/post-images/1610940088437.jpg" alt="" loading="lazy"></figure>
+<p>当然，简单方法就是nn.Sequential，这个最方便，直接net=nn.Sequential（网络层），网络层按你传入的顺序添加到计算图中<br>
+可以通过net.parameters()来查看模型所有的可学习参数，此函数将返回一个生成器。</p>
+<pre><code class="language-python">for param in net.parameters():
+    print(param)
+</code></pre>
+<h1 id="给不同子网络设置不同学习率finetune常用">给不同子网络设置不同学习率（finetune常用）</h1>
+<p>举例：</p>
+<pre><code class="language-python">optimizer =optim.SGD([
+                # 如果对某个参数不指定学习率，就使用最外层的默认学习率
+                {'params': net.subnet1.parameters()}, # lr=0.03
+                {'params': net.subnet2.parameters(), 'lr': 0.01}
+            ], lr=0.03)
+</code></pre>
+<pre><code>似乎在pytorch中，也有类似的方法用于将多个子网络训练，之后可以进行研究
+</code></pre>
 
 
                         </div>
