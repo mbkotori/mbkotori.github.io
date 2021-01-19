@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>mbkotori&apos;s blog</title>
-    <updated>2021-01-19T02:34:19.343Z</updated>
+    <updated>2021-01-19T02:36:07.604Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -12,43 +12,43 @@
     <rights>All rights reserved 2021, mbkotori&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[2021/1/19]]></title>
-        <id>https://mbkotori.github.io/2021119/</id>
-        <link href="https://mbkotori.github.io/2021119/">
+        <id>https://mbkotori.github.io/post/2021119/</id>
+        <link href="https://mbkotori.github.io/post/2021119/">
         </link>
         <updated>2021-01-19T01:02:44.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[2021/1/18]]></title>
-        <id>https://mbkotori.github.io/2021118/</id>
-        <link href="https://mbkotori.github.io/2021118/">
+        <id>https://mbkotori.github.io/post/2021118/</id>
+        <link href="https://mbkotori.github.io/post/2021118/">
         </link>
         <updated>2021-01-18T01:07:52.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[2021/1/16]]></title>
-        <id>https://mbkotori.github.io/2021116/</id>
-        <link href="https://mbkotori.github.io/2021116/">
+        <id>https://mbkotori.github.io/post/2021116/</id>
+        <link href="https://mbkotori.github.io/post/2021116/">
         </link>
         <updated>2021-01-16T02:26:15.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[2021/1/11]]></title>
-        <id>https://mbkotori.github.io/2021111-zong-jie/</id>
-        <link href="https://mbkotori.github.io/2021111-zong-jie/">
+        <id>https://mbkotori.github.io/post/2021111-zong-jie/</id>
+        <link href="https://mbkotori.github.io/post/2021111-zong-jie/">
         </link>
         <updated>2021-01-12T11:33:45.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Residual Feature Aggregation Network for Image Super-Resolution]]></title>
-        <id>https://mbkotori.github.io/residual-feature-aggregation-network-for-image-super-resolution/</id>
-        <link href="https://mbkotori.github.io/residual-feature-aggregation-network-for-image-super-resolution/">
+        <id>https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/</id>
+        <link href="https://mbkotori.github.io/post/residual-feature-aggregation-network-for-image-super-resolution/">
         </link>
         <updated>2020-10-06T08:17:47.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于作者,和这个blog]]></title>
-        <id>https://mbkotori.github.io/about/</id>
-        <link href="https://mbkotori.github.io/about/">
+        <id>https://mbkotori.github.io/post/about/</id>
+        <link href="https://mbkotori.github.io/post/about/">
         </link>
         <updated>2020-04-15T14:27:42.000Z</updated>
     </entry>

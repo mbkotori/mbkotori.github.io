@@ -1,211 +1,179 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-<meta name="description" content="研究路途中的记录 " />
-<meta name="keywords" content="坚持,探索,求解 ">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    test_JUPYTERNOTEBOOK | mbkotori&#39;s blog
-</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<title>mbkotori&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+<meta name="description" content="研究路途中的记录"/>
+<meta name="keywords" content="研究路途中的记录"/>
 
-    <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1611020060162">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico">
+
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
-<link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
-<link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/jquery.min.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/plugins.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/script.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/aos.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/prism.js'></script>
 
+<!-- Modernizr JS -->
+<script src="https://mbkotori.github.io/media/scripts/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<scripts src="https://mbkotori.github.io/media/scripts/respond.min.js"></scripts>
+<![endif]-->
 
-<link rel="stylesheet" href="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.css">
-<script type="text/javascript" src="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.js"></script>
+<!-- Comment -->
 
-
-
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-
-
-
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163768081-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-163768081-1');
-</script>
-
-
-        
-                <!-- 没开启静态资源加速 -->
-                <script>
-                    $(document).ready(function() {
-                        /**
-                         * 给文章的图片添加放大效果
-                         */
-                        var link;
-                        $(".post_content img").each(function() {
-                            link = $(this).attr("src");
-                            $(this).wrap("<a href=\"" + link + "\"rel =\"gallery\"></a>")
-                        })
-                    })
-                </script>
-                
-</head>
-
-<body class="home blog custom-background round-avatars">
-    <!-- <body class="home blog custom-background round-avatars" itemscope="" itemtype="http://schema.org/Organization" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"></body> -->
     
-    <div class="Yarn_Background" style="background-image: url(/media/images/bg.jpg);"></div>
-     
-    <!-- 搜索开始 -->
+        <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+    
 
-<div class="js-search search-form search-form--modal">
-    <div class="search-form__inner">
-        <div>
-            <div id="search-container" class="ajax_search">
-                <form method="get" id="gridea-search-form" action="https://mbkotori.github.io/search/">
-                    <div class="filter_container">
-                        <input type="text" value="" autocomplete="off" placeholder="请输入要搜索的内容" name="q" id="search-input" />
-                        <ul id="search_filtered" class="search_filtered"></ul>
-                    </div>
-                    <!-- <input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="" /> -->
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 搜索结束 -->
-<div class="navi" data-aos="fade-down">
-    <div class="bt-nav">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-    </div>
-    <div class="navbar animated fadeInRight">
-        <div class="inner">
-            <nav id="site-navigation" class="main-navigation">
-                <div id="main-menu" class="main-menu-container">
-                    <div class="menu-menu-container">
-                        <ul id="primary-menu" class="menu">
-                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="/">
-                                                首页
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="/archives">
-                                                归档
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="https://mbkotori.github.io/friends">
-                                                友链
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="https://mbkotori.github.io/post/about">
-                                                关于
-                                            </a>
-                                        </li>
-                                        
-                                            
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- #site-navigation -->
-        </div>
-    </div>
-</div>
-<div class="hebin" data-aos="fade-down">
-    <i class=" js-toggle-search fa fa-search"></i>
-</div>
-<header id="masthead" class="overlay animated from-bottom" itemprop="brand">
-    <div class="site-branding text-center">
-        <a href="">
-            <figure>
-                
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1611020060162" />
+    
+
+
+
+<!-- katex -->
+<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div id="fh5co-offcanvas">
+    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+    </a>
+    <div class="fh5co-bio">
+        <figure>
+            <img src="https://mbkotori.github.io/images/avatar.png" alt="mbkotori&#39;s blog"
+                 class="img-responsive">
+        </figure>
+        <a href="https://mbkotori.github.io/post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <h2>mbkotori&#39;s blog</h2>
+        <p>研究路途中的记录</p>
+        <ul class="fh5co-social">
+            
+                <li>
                     
-            </figure>
-        </a>
-        <h3 class="blog-description"><p>研究路途中的记录</p></h3>
+                        <a href="https://github.com/mbkotori" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+        </ul>
     </div>
-    <!-- .site-branding -->
-    <div class="decor-part">
-        <div id="particles-js"></div>
+
+    <div class="fh5co-menu">
+
+        <!-- 标签 -->
+        <div class="fh5co-box">
+            <a href="https://mbkotori.github.io/tags/"><h3 class="heading">👉标签</h3></a>
+            <ul>
+                
+                    <li><a href="https://mbkotori.github.io/tag/daily/">每日总结</a></li>
+                
+                    <li><a href="https://mbkotori.github.io/tag/DeepLearning/">深度学习</a></li>
+                
+                    <li><a href="https://mbkotori.github.io/tag/notice/">公告</a></li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="animation-header">
-        <div class="decor-wrapper">
-            <svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
-                <path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
-            </svg>
+</div>
+
+<header id="fh5co-header">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <ul class="fh5co-social">
+                
+                    <li>
+                        <a href="/"
+                        
+                        >
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives"
+                        
+                        >
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mbkotori.github.io/post/links"
+                        
+                        >
+                            友链
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mbkotori.github.io/post/about"
+                        
+                        >
+                            关于
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="col-lg-12 col-md-12 text-center">
+                <h1 id="fh5co-logo">
+                    <a href="https://mbkotori.github.io">mbkotori&#39;s blog </a>
+                </h1>
+            </div>
         </div>
     </div>
 </header>
 
-        <!-- 图片放大开始 -->
 
-        <!-- 图片放大结束 -->
-        <div id="main" class="content">
-            <!-- 测试开始 -->
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
 
-            <!-- 测试结束 -->
-            <!-- 文章开始 -->
-            <div class="container">
-                <article class="js-gallery post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                    <style>
-                        .container {
-                            padding: 10px 0px;
-                        }
-                        
-                        .post {
-                            margin: 0 auto
-                        }
-                    </style>
+    <!-- 等gridea出自定义页面功能再优化一下 -->
+    
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">test_JUPYTERNOTEBOOK</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2021-01-13</li>
+                <li>78字</li>
+                <li>1 min read</li>
+            </ol>
 
-                    <section class="post_content">
-                        <header class="post_header">
-                            <h1 class="post_title yellow-under">
-                                test_JUPYTERNOTEBOOK
-                            </h1>
-                        </header>
-                        <div class="post-body js-gallery">
-                            <pre><code class="language-python">x = x.new_ones(5, 3, dtype=torch.float64)  # 返回的tensor默认具有相同的torch.dtype和torch.device
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <pre><code class="language-python">x = x.new_ones(5, 3, dtype=torch.float64)  # 返回的tensor默认具有相同的torch.dtype和torch.device
 print(x)
 
 x = torch.randn_like(x, dtype=torch.float) # 指定新的数据类型
@@ -217,178 +185,120 @@ patientDic = {'001':'猴子','002':'马云','003':'王健林','004':'马化腾'}
 </code></pre>
 <pre><code class="language-python">patientDic
 </code></pre>
+ </p>
+                    </div>
+                </div>
 
-
-                        </div>
-                        <!-- Tips开始 -->
+                <div class="row">
+                    <div class="col-md-12 animate-box">
                         
-                            <hr>
-                            <div class="alerts success"><i class="fa fa-warning"><strong>NOTE:</strong></i>
-                                禁止转载,特殊需要可联系作者
-                            </div>
+                    </div>
+                </div>
 
-                            
-                                <!-- Tips结束 -->
-                                <!-- 文章底部信息开始 -->
-                                <div class="meta split split--responsive cf">
-                                    <div class="split__title">
-                                        <time>2021-01-13</time>
-                                        
-                                                    
-                                    </div>
-                                    <div id="social-share"><span class="entypo-share"><i class="fa fa-share-square-o"></i>分享</span></div>
-                                    <div class="slide">
-                                        <a class="btn-slide" title="switch down"><i class="fa fa-chevron-down"></i>折叠评论区</a>
-                                    </div>
-                                </div>
-                                <!-- 文章底部信息结束 -->
-                    </section>
-                </article>
-            </div>
-            <!-- 分享开始 -->
-            <svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-            <div id="social">
-                <ul>
-                    <li>
-                        <a id="qzoneShare" href="javascript:void(0)" target="_blank"><i class="fa fa-tencent-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="weiboShare" href="javascript:void(0)" title="weibo" target="_blank"><i
-              class="fa fa-weibo fa-lg"></i></a>
-                    </li>
-                    <li>
-                        <a id="qqShare" href="javascript:void(0)" target="_blank"><i class="fa fa-qq fa-lg"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 分享结束 -->
-            <!-- 文章结束 -->
-
-            <!-- 上下一篇文章开始 -->
-            <!-- 如果有图片展示文章封面，如果没有图片展示默认图片 -->
-            <div class="navpost-part">
-                <div id="NextPrevPosts" style="display: block;">
-                    
-                            
-            </div>
-            <!-- 上下一篇文章结束 -->
-            <!-- 评论区开始 -->
-            <div id="panel" style="display: block;">
-    <div class="comment-area">
-      <section class="comments">
-        <div class="comments-main">
-          
-          
-          <div id="gitalk-container"></div>
-          <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: '54e625d76ee66c5e4dda',
-            clientSecret: '5a7c8f57166925176b5740a98304d97987e23054',
-            repo: 'mbkotori.github.io',
-            owner: 'mbkotori',
-            admin: ['mbkotori'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
-
-        gitalk.render('gitalk-container')
-    }
-</script>
-          
-          
-          
-        </div>
-      </section>
-    </div>
-  </div>
-                <!-- 评论区结束 -->
-        </div>
+                <div class="row">
+    <div class="col-md-12 animate-box">
         
-<div id="backToTop" style="display: block;">
-    <img src="https://moguos.oss-cn-shenzhen.aliyuncs.com/boxmoe/assets/images/top/lolisister1.gif">
+            
+                <div id="gitalk-container"></div>
+            
+
+            
+        
+    </div>
+</div>
+
+            </div>
+
+        </article>
+    </div>
+</div>
+
+    
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
+    
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    
 </div>
 
 
-
-
-    <script>
-    	jQuery(document).on('copy', function (e) {
-		var selected = window.getSelection();
-		var selectedText = selected.toString().replace(/\n/g, '<br>');  // Solve the line breaks conversion issue
-		var pageInfo = "复制版权保护测试,转载需要请联系作者";
-		var copyHolder = $('<div>', { id: 'temp', html: selectedText + pageInfo, style: { position: 'absolute', left: '-99999px' } });
-
-		$('body').append(copyHolder);
-		selected.selectAllChildren(copyHolder[0]);
-		window.setTimeout(function () {
-			copyHolder.remove();
-		}, 0);
-	});
-</script>
-  
-
-
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/particles.js'></script>
-
-
-<footer id="footer" class="overlay animated from-top">
-    <div class="decor-wrapper">
-        <svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100"
-            preserveAspectRatio="none">
-            <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
-            <path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
-        </svg>
-    </div>
-    <div class="socialize" data-aos="zoom-in">
-        
-        <a title="github" class="socialicon" href="https://github.com/mbkotori "><i class="fa fa-github"
-                aria-hidden="true"></i></a>
-        
-        
-        
-        
-        
-        
-
-    </div>
-    <div class="cr">
-        Copyright&copy;
-        <a href="http://mbkotori.ys168.com/" target="_blank">留言系统(Click Here)</a> |
-        <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+    
+<footer id="fh5co-footer">
+  <p><a href="http://mbkotori.ys168.com/" target="_blank">留言系统(Click Here)</a></p>
 </footer>
-            <script>
-    /* 分享代码 */
-    var feature = "";
-    if(feature == ""){
-      feature = "https://mbkotori.github.io/favicon.ico";
-    }
-      $("#weiboShare").click(function(){
-        var url = "http://v.t.sina.com.cn/share/share.php?title=" + document.title + "&url=" + document.url + "&pic=" + feature;
-        window.open(url);
-      })
-      $("#qqShare").click(function () {
-        var url = "http://connect.qq.com/widget/shareqq/index.html?url="+ document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-        window.open(url);
-        })
-        $("#qzoneShare").click(function () {
-          var url = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + document.url + "&sharesource=qzone&title="+ document.title +"&pics="+feature;
-          window.open(url);
-      })
-  </script>
 
-                <!-- 测试代码开始 -->
 
-                <!-- 测试代码结束 -->
+    <!-- jQuery -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://mbkotori.github.io/media/scripts/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://mbkotori.github.io/media/scripts/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://mbkotori.github.io/media/scripts/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<!-- highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+
+
+<script type="application/javascript">
+    // 代码高亮
+    hljs.initHighlightingOnLoad();
+
+    // img 懒加载
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        // tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 目录
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
+    });
+
+    
+</script>
+
+
+
+    
+        <script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+        <script>
+
+            var gitalk = new Gitalk({
+                clientID: '54e625d76ee66c5e4dda',
+                clientSecret: '5a7c8f57166925176b5740a98304d97987e23054',
+                repo: 'mbkotori.github.io',
+                owner: 'mbkotori',
+                admin: ['mbkotori'],
+                id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+                distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+
+            gitalk.render('gitalk-container')
+
+        </script>
+    
+
+    
+
+
+
+
 </body>
-
 </html>

@@ -1,229 +1,240 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8" />
-<meta name="description" content=" " />
-<meta name="keywords" content=" ">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    公告 | mbkotori&#39;s blog
-</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<title>mbkotori&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+<meta name="description" content="研究路途中的记录"/>
+<meta name="keywords" content="研究路途中的记录"/>
 
-    <!-- 没开启静态资源加速 -->
-<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico?v=1600827638665">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="https://mbkotori.github.io/favicon.ico">
+
 <link rel="stylesheet" href="https://mbkotori.github.io/styles/main.css">
-<link rel="stylesheet" href="https://mbkotori.github.io/media/css/prism.css">
-<link rel="stylesheet" href="https://mbkotori.github.io/media/css/font-awesome.min.css">
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/jquery.min.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/plugins.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/script.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/aos.js'></script>
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/prism.js'></script>
 
+<!-- Modernizr JS -->
+<script src="https://mbkotori.github.io/media/scripts/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<scripts src="https://mbkotori.github.io/media/scripts/respond.min.js"></scripts>
+<![endif]-->
 
-<link rel="stylesheet" href="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.css">
-<script type="text/javascript" src="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.js"></script>
-
+<!-- Comment -->
 
 
 
+<!-- katex -->
+<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 
 
-  <!-- 防止浏览器缓存 -->
-<meta http-equiv="pragma" content="no-cache"> 
-<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
-<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+
 </head>
-
-<body class="home blog custom-background round-avatars">
-  
-        
-            <div class="Yarn_Background" style="background-image: url( https://mbkotori.github.io/media/images/bg.jpg);"></div>
-        
-     
-    <!-- 搜索开始 -->
-
-<div class="js-search search-form search-form--modal">
-    <div class="search-form__inner">
-        <div>
-            <div id="search-container" class="ajax_search">
-                <form method="get" id="gridea-search-form" action="https://mbkotori.github.io/search/">
-                    <div class="filter_container">
-                        <input type="text" value="" autocomplete="off" placeholder="请输入要搜索的内容" name="q" id="search-input" />
-                        <ul id="search_filtered" class="search_filtered"></ul>
-                    </div>
-                    <!-- <input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="" /> -->
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 搜索结束 -->
-<div class="navi" data-aos="fade-down">
-    <div class="bt-nav">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-    </div>
-    <div class="navbar animated fadeInRight">
-        <div class="inner">
-            <nav id="site-navigation" class="main-navigation">
-                <div id="main-menu" class="main-menu-container">
-                    <div class="menu-menu-container">
-                        <ul id="primary-menu" class="menu">
-                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="/">
-                                                首页
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="/archives">
-                                                归档
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="https://mbkotori.github.io/post/friends">
-                                                友链
-                                            </a>
-                                        </li>
-                                        
-                                            
-                                
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a href="https://mbkotori.github.io/post/about">
-                                                关于
-                                            </a>
-                                        </li>
-                                        
-                                            
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- #site-navigation -->
-        </div>
-    </div>
-</div>
-<div class="hebin" data-aos="fade-down">
-    <i class=" js-toggle-search fa fa-search"></i>
-</div>
-<header id="masthead" class="overlay animated from-bottom" itemprop="brand">
-    <div class="site-branding text-center">
-        <a href="">
-            <figure>
-                
-                    <img class="custom-logo avatar" src="https://mbkotori.github.io/images/avatar.png?v=1600827638665" />
+<body>
+<div id="fh5co-offcanvas">
+    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+    </a>
+    <div class="fh5co-bio">
+        <figure>
+            <img src="https://mbkotori.github.io/images/avatar.png" alt="mbkotori&#39;s blog"
+                 class="img-responsive">
+        </figure>
+        <a href="https://mbkotori.github.io/post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <h2>mbkotori&#39;s blog</h2>
+        <p>研究路途中的记录</p>
+        <ul class="fh5co-social">
+            
+                <li>
                     
-            </figure>
-        </a>
-        <h3 class="blog-description"><p>研究路途中的记录</p></h3>
+                        <a href="https://github.com/mbkotori" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+        </ul>
     </div>
-    <!-- .site-branding -->
-    <div class="decor-part">
-        <div id="particles-js"></div>
+
+    <div class="fh5co-menu">
+
+        <!-- 标签 -->
+        <div class="fh5co-box">
+            <a href="https://mbkotori.github.io/tags/"><h3 class="heading">👉标签</h3></a>
+            <ul>
+                
+                    <li><a href="https://mbkotori.github.io/tag/daily/">每日总结</a></li>
+                
+                    <li><a href="https://mbkotori.github.io/tag/DeepLearning/">深度学习</a></li>
+                
+                    <li><a href="https://mbkotori.github.io/tag/notice/">公告</a></li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="animation-header">
-        <div class="decor-wrapper">
-            <svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-                <path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
-                <path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
-                <path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
-                <path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
-            </svg>
+</div>
+
+<header id="fh5co-header">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <ul class="fh5co-social">
+                
+                    <li>
+                        <a href="/"
+                        
+                        >
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives"
+                        
+                        >
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mbkotori.github.io/post/links"
+                        
+                        >
+                            友链
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mbkotori.github.io/post/about"
+                        
+                        >
+                            关于
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="col-lg-12 col-md-12 text-center">
+                <h1 id="fh5co-logo">
+                    <a href="https://mbkotori.github.io">mbkotori&#39;s blog </a>
+                </h1>
+            </div>
         </div>
     </div>
 </header>
 
-  <div id="main" class="content">
-    <div class="container">
-      <section class="post_content">
-        <h3 class="catalog-title yellow-under" style="margin-bottom: 5%;">当前标签：公告 </h3>
-        
 
+<div class="container-fluid">
 
-    <div class="post post-layout-list aos-init aos-animate shadow" data-aos="fade-up">
-        <div class="status_list_item icon_kyubo">
-            
-                <div class="status_user" style="background-image: url(http://ys-c.ys168.com/83311221/jUvxmnr2K381K785JOmuh/lu16.jpg);">
-
-                 
-                <div class="status_section">
-                    <a href="https://mbkotori.github.io/post/about/" class="status_btn">关于作者,和这个blog</a>
-                    <h5 class="review-item-creator"><b>发布日期：</b>2020-04-15</h5>
-                    
-                        <a href="https://mbkotori.github.io/tag/notice/" class="autotag">公告</a>
-                        
-                    
-                            <p class="section_p">🏠 关于本站
-本站属于个人纪录,分享遇到的坑,鉴于自己即将面对研究生生活,留下这么一个网站来作为自己的知识存储和记录也是非常重要的.
-一开始考虑过CSDN or 博客园,考虑到审核问题放弃了,既然自己也没有什么特效需要,索性使用静态blog的形式来制作,也省去域名等麻烦.
-👨‍💻 博客内容
-主要会记录自己在深度学习方面出现的问题和遇到的坑,也可能分享一些自己的思考感悟(某种情况下可能会超出审...</p>
-                        
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-        
-
-      </section>
-
-    </div>
+  <div class="col-lg-12 col-md-12 text-center tag-title">
+      <i class="fa fa-tag"></i> 标签: <h3>公告</h3>
   </div>
-  
 
-  
+  <div class="row fh5co-post-entry">
+
+    
+      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
+        <figure class="img-box">
+          <a href="https://mbkotori.github.io/post/about/">
+            
+              <img data-original="https://mbkotori.github.io/post-images/about.jpg" alt="关于作者,和这个blog" class="img-responsive img-rounded lazy">
+            
+          </a>
+        </figure>
+        <span class="fh5co-meta">
+          
+            <div class="tag-container">
+              
+                <a href="https://mbkotori.github.io/tag/notice/" class="tag">公告, </a>
+              
+            </div>
+          
+        </span>
+        <h3 class="fh5co-article-title">
+          <a href="https://mbkotori.github.io/post/about/">关于作者,和这个blog</a>
+        </h3>
+        <span class="fh5co-meta fh5co-date">2020-04-15</span>
+      </article>
+    
+    <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
+
+  </div>
+
+  <div class="pagination-box animate-box">
+    
+    
+  </div>
+</div>
 
 
-<script type='text/javascript' src='https://mbkotori.github.io/media/js/particles.js'></script>
-
-
-<footer id="footer" class="overlay animated from-top">
-    <div class="decor-wrapper">
-        <svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100"
-            preserveAspectRatio="none">
-            <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-            <path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
-            <path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
-            <path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
-            <path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
-        </svg>
-    </div>
-    <div class="socialize" data-aos="zoom-in">
-        
-        
-        
-        
-        
-        
-
-    </div>
-    <div class="cr">
-        Copyright&copy;
-        <a href="http://mbkotori.ys168.com/" target="_blank">留言系统(Click Here)</a> |
-        <a class="rss" href="https://mbkotori.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+<footer id="fh5co-footer">
+  <p><a href="http://mbkotori.ys168.com/" target="_blank">留言系统(Click Here)</a></p>
 </footer>
 
-</body>
 
+<!-- jQuery -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://mbkotori.github.io/media/scripts/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://mbkotori.github.io/media/scripts/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://mbkotori.github.io/media/scripts/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://mbkotori.github.io/media/scripts/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<!-- highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+
+
+<script type="application/javascript">
+    // 代码高亮
+    hljs.initHighlightingOnLoad();
+
+    // img 懒加载
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        // tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 目录
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
+    });
+
+    
+</script>
+
+
+
+
+</body>
 </html>
