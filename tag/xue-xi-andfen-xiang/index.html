@@ -205,182 +205,33 @@
     
             <div class="main">
                 <div class="container">
-                    <article class="post-wrap">
-                        <header class="post-header">
-                            <h1 class="post-title">
-                                2021/1/18
-                            </h1>
+                    <div class="post-wrap archive">
+                        
                             
-                                    <!--zh-->
-                                    <div class="post-meta zh">
-                                        &#x4F5C;&#x8005;:
-                                        <a itemprop="author" rel="author" href="/">
-                                            mbkotori's blog
-                                        </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-01-18</a></span>
-                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">2.1
-                                    &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">576</a></span>
+                                <h3>
+                                    2021
+                                </h3>
+                                
+                                    
+
+                                        <article class="archive-item">
+                                            <a class="archive-item-link" href="https://mbkotori.github.io/post/huan-liao-ge-zhu-ti-shun-bian-yan-jiu-xia-zai-md-zhong-de-latex-fang-fa/">
+                                                换了个主题，顺便研究下在md中的latex方法
+                                            </a>
+                                            <span class="archive-item-date">2021-01-19 </span>
+                                        </article>
                                         
-                                            <span class="post-category">&#x5206;&#x7C7B;:
-                                
-                                <a href="https://mbkotori.github.io/tag/daily/">每日总结</a>
-                                
-                            </span>
-                                            
-                                    </div>
-                                    
-                        </header>
-                        
-                            <img class="post-feature-image" src="http://ys-o.ys168.com/614621475/813402917/jsgnqmu33664T536L3M4a/%E6%97%A5%E8%AE%B0%E5%9B%BE%E7%89%87.PNG" alt="">
-                          
-                        <div class="post-content">
-                            <h1 id="pytorch搭建网络定义模型">pytorch搭建网络（定义模型）</h1>
-<p>（1）导入<code>torch.nn</code>模块，nn就是利用autograd定义模型，nn的核心数据结构是<code>Module</code>，这是一个抽象概念，可以表示神经网络中某个词或者包含多层的神经网络。<br>
-实际运用时，最常见做法是继承nn.Module，一个nn.Module实例应该包含一些层以及返回输出的前向传播（forward）方法</p>
-<h2 id="这部分以后我得好好理清楚面向对象的部分">这部分以后我得好好理清楚面向对象的部分</h2>
-<p>个人理解：nn.Module就是标准积木，现在我们的模型就是某个我们设计好的模型玩具，要想搭成这个玩具，我们先得从标准积木（nn.Module）中构建出我们要的指定模块(网络层)，最后forward方法就是自己搞出来的‘拼装手册’，怎么把我们的积木拼成我们的玩具。</p>
-<h3 id="想想8x8微型积木就好了">想想8x8微型积木就好了</h3>
-<figure data-type="image" tabindex="1"><img src="http://ys-d.ys168.com/614621432/813403427/k64523X6JGVNWFlpglqo59/1610940088437.jpg" alt="" loading="lazy"></figure>
-<p>当然，简单方法就是nn.Sequential，这个最方便，直接net=nn.Sequential（网络层），网络层按你传入的顺序添加到计算图中<br>
-可以通过net.parameters()来查看模型所有的可学习参数，此函数将返回一个生成器。</p>
-<pre><code class="language-python">for param in net.parameters():
-    print(param)
-</code></pre>
-<h1 id="给不同子网络设置不同学习率finetune常用">给不同子网络设置不同学习率（finetune常用）</h1>
-<p>举例：</p>
-<pre><code class="language-python">optimizer =optim.SGD([
-                # 如果对某个参数不指定学习率，就使用最外层的默认学习率
-                {'params': net.subnet1.parameters()}, # lr=0.03
-                {'params': net.subnet2.parameters(), 'lr': 0.01}
-            ], lr=0.03)
-</code></pre>
-<pre><code>似乎在pytorch中，也有类似的方法用于将多个子网络训练，之后可以进行研究
-</code></pre>
-<h1 id="torch中的各种轮子深度学习框架就是这么用的嘛">torch中的各种轮子（深度学习框架就是这么用的嘛）</h1>
-<p>torch.utils.data模块提供了有关数据处理的工具，torch.nn模块定义了大量神经网络的层，torch.nn.init模块定义了各种初始化方法，torch.optim模块提供了很多常用的优化算法。</p>
-<h1 id="softmax特点">Softmax特点</h1>
-<p>softmax运算常被用在分类问题，他的好处就是将我们多分类的输出值变换成正值且和为一的概率分布<br>
-之后我们可以通过取最大概率作为分类判断依据<br>
-参考网页：<a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.4_softmax-regression?id=_342-softmax%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b">https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.4_softmax-regression?id=_342-softmax回归模型</a></p>
-
-                        </div>
-                        
-                            <div class="post-toc">
-                                <ul class="markdownIt-TOC">
-<li><a href="#pytorch%E6%90%AD%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B">pytorch搭建网络（定义模型）</a>
-<ul>
-<li><a href="#%E8%BF%99%E9%83%A8%E5%88%86%E4%BB%A5%E5%90%8E%E6%88%91%E5%BE%97%E5%A5%BD%E5%A5%BD%E7%90%86%E6%B8%85%E6%A5%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E5%88%86">这部分以后我得好好理清楚面向对象的部分</a>
-<ul>
-<li><a href="#%E6%83%B3%E6%83%B38x8%E5%BE%AE%E5%9E%8B%E7%A7%AF%E6%9C%A8%E5%B0%B1%E5%A5%BD%E4%BA%86">想想8x8微型积木就好了</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E7%BB%99%E4%B8%8D%E5%90%8C%E5%AD%90%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%AD%A6%E4%B9%A0%E7%8E%87finetune%E5%B8%B8%E7%94%A8">给不同子网络设置不同学习率（finetune常用）</a></li>
-<li><a href="#torch%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E8%BD%AE%E5%AD%90%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E7%94%A8%E7%9A%84%E5%98%9B">torch中的各种轮子（深度学习框架就是这么用的嘛）</a></li>
-<li><a href="#softmax%E7%89%B9%E7%82%B9">Softmax特点</a></li>
-</ul>
-
-                            </div>
-                            
-                                
-                                    
-                                            <!--zh-->
-                                            <section class="post-copyright zh">
-                                                <p class="copyright-item ">
-                                                    <span>&#x4F5C;&#x8005;:</span>
-                                                    <span>mbkotori's blog</span>
-                                                </p>
-
-                                                <p class="copyright-item">
-                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                                    <span><a href="https://mbkotori.github.io/post/2021118/">https://mbkotori.github.io/post/2021118/</a></span>
-                                                </p>
-
-                                                <p class="copyright-item">
-                                                    <span>&#x534F;&#x8BAE;:</span>
-                                                    <span>MIT License</span>
-                                                </p>
-                                            </section>
                                             
                                                 
-                                                    
-                                                                    <!--Share-->
-                                                                    <span style="margin-right:15px">
-                        <i class="post-share"></i>
-                        <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mbkotori.github.io/post/2021118/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://mbkotori.github.io/post/2021118/&sharesource=qzone&title=2021/1/18&pics=https://mbkotori.github.io/images/avatar.png?v=1611046403801&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://mbkotori.github.io/post/2021118/&sharesource=weibo&title=2021/1/18 + " - " + &pic="https://mbkotori.github.io/images/avatar.png?v=1611046403801 "><i class="fa fa-weibo "></i></a>
-
-                                                                    </span>
-                                                                    
-                                                                            <!--zh-->
-                                                                            <section class="post-tags zh ">
-                                                                                <div>
-                                                                                    <span>&#x6807;&#x7B7E;:</span>
-                                                                                    <span class="tag ">
-                        
-                        
-                        <a href="https://mbkotori.github.io/tag/daily/">#
-                    每日总结
-                        </a>
+                    </div>
+                    <div class="pagination-container">
                         
                             
-                                </span>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="javascript:window.history.back();">
-                        &#x8FD4;&#x56DE;</a>
-                                                                                    <span>&dot;</span>
-                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
-                                                                                </div>
-                                                                            </section>
-
-                                                                            
-                                                                                <!---->
-                                                                                <section class="post-nav">
-                                                                                    
-                                                                                        <a class="prev" rel="prev" href="https://mbkotori.github.io/post/huan-liao-ge-zhu-ti-shun-bian-yan-jiu-xia-zai-md-zhong-de-latex-fang-fa/">
-                                                                                            换了个主题，顺便研究下在md中的latex方法
-                                                                                        </a>
-                                                                                        
-                                                                                            
-                                                                                                <a class="next" rel="next" href="https://mbkotori.github.io/post/2021116/">
-                                                                                                    2021/1/16
-                                                                                                </a>
-                                                                                                
-                                                                                </section>
-                    </article>
-                </div>
-                
-                    
-                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
-
-<script>
-    var gitalk = new Gitalk({
-        clientID: '54e625d76ee66c5e4dda',
-        clientSecret: '5a7c8f57166925176b5740a98304d97987e23054',
-        repo: 'mbkotori.github.io',
-        owner: 'mbkotori',
-        admin: ['mbkotori'],
-        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-        distractionFreeMode: false // Facebook-like distraction free mode
-    })
-
-    gitalk.render('gitalk-container')
-</script>
-                            
-                                        
+                                    
                                             
+                    </div>
+                </div>
             </div>
-    </div>
-    </div>
     </div>
     
     <div id="player"></div>
@@ -477,8 +328,5 @@
                 </script>
         </div>
 </body>
-<script>
-    scroll();
-</script>
 
 </html>

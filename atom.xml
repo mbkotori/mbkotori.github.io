@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>mbkotori&apos;s blog</title>
-    <updated>2021-01-19T08:18:16.943Z</updated>
+    <updated>2021-01-19T08:55:56.153Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -11,9 +11,9 @@
     <icon>https://mbkotori.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, mbkotori&apos;s blog</rights>
     <entry>
-        <title type="html"><![CDATA[2021/1/19]]></title>
-        <id>https://mbkotori.github.io/post/2021119/</id>
-        <link href="https://mbkotori.github.io/post/2021119/">
+        <title type="html"><![CDATA[换了个主题，顺便研究下在md中的latex方法]]></title>
+        <id>https://mbkotori.github.io/post/huan-liao-ge-zhu-ti-shun-bian-yan-jiu-xia-zai-md-zhong-de-latex-fang-fa/</id>
+        <link href="https://mbkotori.github.io/post/huan-liao-ge-zhu-ti-shun-bian-yan-jiu-xia-zai-md-zhong-de-latex-fang-fa/">
         </link>
         <updated>2021-01-19T01:02:44.000Z</updated>
     </entry>
