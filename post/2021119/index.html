@@ -7,7 +7,7 @@
 <meta name="keywords" content="坚持,探索,求解 ">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    2021/1/18 | mbkotori&#39;s blog
+    2021/1/19 | mbkotori&#39;s blog
 </title>
 
 
@@ -201,39 +201,11 @@
                     <section class="post_content">
                         <header class="post_header">
                             <h1 class="post_title yellow-under">
-                                2021/1/18
+                                2021/1/19
                             </h1>
                         </header>
                         <div class="post-body js-gallery">
-                            <h1 id="pytorch搭建网络定义模型">pytorch搭建网络（定义模型）</h1>
-<p>（1）导入<code>torch.nn</code>模块，nn就是利用autograd定义模型，nn的核心数据结构是<code>Module</code>，这是一个抽象概念，可以表示神经网络中某个词或者包含多层的神经网络。<br>
-实际运用时，最常见做法是继承nn.Module，一个nn.Module实例应该包含一些层以及返回输出的前向传播（forward）方法</p>
-<h2 id="这部分以后我得好好理清楚面向对象的部分">这部分以后我得好好理清楚面向对象的部分</h2>
-<p>个人理解：nn.Module就是标准积木，现在我们的模型就是某个我们设计好的模型玩具，要想搭成这个玩具，我们先得从标准积木（nn.Module）中构建出我们要的指定模块(网络层)，最后forward方法就是自己搞出来的‘拼装手册’，怎么把我们的积木拼成我们的玩具。</p>
-<h3 id="想想8x8微型积木就好了">想想8x8微型积木就好了</h3>
-<figure data-type="image" tabindex="1"><img src="https://mbkotori.github.io/post-images/1610940088437.jpg" alt="" loading="lazy"></figure>
-<p>当然，简单方法就是nn.Sequential，这个最方便，直接net=nn.Sequential（网络层），网络层按你传入的顺序添加到计算图中<br>
-可以通过net.parameters()来查看模型所有的可学习参数，此函数将返回一个生成器。</p>
-<pre><code class="language-python">for param in net.parameters():
-    print(param)
-</code></pre>
-<h1 id="给不同子网络设置不同学习率finetune常用">给不同子网络设置不同学习率（finetune常用）</h1>
-<p>举例：</p>
-<pre><code class="language-python">optimizer =optim.SGD([
-                # 如果对某个参数不指定学习率，就使用最外层的默认学习率
-                {'params': net.subnet1.parameters()}, # lr=0.03
-                {'params': net.subnet2.parameters(), 'lr': 0.01}
-            ], lr=0.03)
-</code></pre>
-<pre><code>似乎在pytorch中，也有类似的方法用于将多个子网络训练，之后可以进行研究
-</code></pre>
-<h1 id="torch中的各种轮子深度学习框架就是这么用的嘛">torch中的各种轮子（深度学习框架就是这么用的嘛）</h1>
-<p>torch.utils.data模块提供了有关数据处理的工具，torch.nn模块定义了大量神经网络的层，torch.nn.init模块定义了各种初始化方法，torch.optim模块提供了很多常用的优化算法。</p>
-<h1 id="softmax特点">Softmax特点</h1>
-<p>softmax运算常被用在分类问题，他的好处就是将我们多分类的输出值变换成正值且和为一的概率分布<br>
-之后我们可以通过取最大概率作为分类判断依据<br>
-参考网页：<a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.4_softmax-regression?id=_342-softmax%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b">https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.4_softmax-regression?id=_342-softmax回归模型</a></p>
-
+                            
 
                         </div>
                         <!-- Tips开始 -->
@@ -248,7 +220,7 @@
                                 <!-- 文章底部信息开始 -->
                                 <div class="meta split split--responsive cf">
                                     <div class="split__title">
-                                        <time>2021-01-18</time>
+                                        <time>2021-01-19</time>
                                         
                                                     
                                     </div>
@@ -287,17 +259,6 @@
             <div class="navpost-part">
                 <div id="NextPrevPosts" style="display: block;">
                     
-                        <div class="prev aos-init aos-animate" data-aos="slide-right" data-aos-delay="1.5s">
-                            <div class="arrow"><i class="fa fa-angle-double-left"></i>
-                            </div>
-                            <div class="preview">
-                                
-                                        <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
-                                        
-                                            <a class="pull-left preview-content bold" href="https://mbkotori.github.io/post/2021119/"><span>2021/1/19</span></a>
-                            </div>
-                        </div>
-                        
                             
                                 <div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
                                     <div class="arrow"><i class="fa fa-angle-double-right"></i></div>
@@ -305,8 +266,8 @@
                                         
                                                 <div class="pull-left featuredImg" style="background-image:url(https://mbkotori.github.io/media/images/no-image.png);"></div>
                                                 
-                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/2021116/"><span>
-                2021/1/16</span></a>
+                                                    <a class="pull-right preview-content bold" href="https://mbkotori.github.io/post/2021118/"><span>
+                2021/1/18</span></a>
                                     </div>
                                 </div>
                 </div>
