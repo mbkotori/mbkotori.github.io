@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mbkotori.github.io</id>
     <title>mbkotori&apos;s blog</title>
-    <updated>2021-01-21T09:16:04.940Z</updated>
+    <updated>2021-01-22T04:17:39.956Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mbkotori.github.io"/>
     <link rel="self" href="https://mbkotori.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://mbkotori.github.io/images/avatar.png</logo>
     <icon>https://mbkotori.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, mbkotori&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[2020/1/22]]></title>
+        <id>https://mbkotori.github.io/post/2020122/</id>
+        <link href="https://mbkotori.github.io/post/2020122/">
+        </link>
+        <updated>2021-01-22T02:14:03.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020/1/21]]></title>
         <id>https://mbkotori.github.io/post/2020121/</id>
