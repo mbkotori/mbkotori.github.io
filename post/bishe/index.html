@@ -216,7 +216,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                2021/1/16
+                                毕设内容整理
                             </h1>
                             
                                     <!--zh-->
@@ -225,15 +225,15 @@
                                         <a itemprop="author" rel="author" href="/">
                                             mbkotori's blog
                                         </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-01-16</a></span>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-03-04</a></span>
                                         <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">4.8
+                                    href="#">1.1
                                     &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1302</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">306</a></span>
                                         
                                             <span class="post-category">&#x5206;&#x7C7B;:
                                 
-                                <a href="https://mbkotori.github.io/tag/daily/">每日总结</a>
+                                <a href="https://mbkotori.github.io/tag/xue-xi-andfen-xiang/">学习&分享</a>
                                 
                             </span>
                                             
@@ -241,77 +241,50 @@
                                     
                         </header>
                         
-                            <img class="post-feature-image" src="http://ys-o.ys168.com/614621475/813402917/jsgnqmu33664T536L3M4a/%E6%97%A5%E8%AE%B0%E5%9B%BE%E7%89%87.PNG" alt="">
+                            <img class="post-feature-image" src="http://img.doutula.com/production/uploads/image/2018/05/02/20180502273579_GELrCj.jpg" alt="">
                           
                         <div class="post-content">
-                            <h1 id="tensor和numpy转换">tensor和numpy转换</h1>
-<p>使用numpy()和from_numpy()相互转换,这两函数生成结果和源数据是共享内存的(速度快,但是改变一个另一个也改变)</p>
-<p>另一方法是torch.tensor(),该方法是先数据拷贝,时间空间消耗大,也不共享内存</p>
-<p>除了CharTensor外,所有在CPU上的tensor都可以和numpy数组转换<br>
-(感想:自由啊,回想起tensorflow中连print都打印不出内容的情况,pytorch某种程度上方便太多了!)</p>
-<p>用to()将tensor在GPU,CPU上移动,当然你得有gpu<br>
-指定device: <code>device = torch.device('cuda')</code><br>
-移动: <code>x=x.to(device)</code><br>
-这就把实现了一次移动</p>
-<h1 id="autograd">autograd</h1>
-<p>这个包能根据输入和前向传播自动构建计算图和执行反向传播<br>
-核心类:tensor<br>
-将属性<code>.requires_grad</code>设置<code>True</code>就会追踪<code>tensor</code>的操作(那么就可以利用链式法则进行梯度传播),调用<code>.backward()</code>完成梯度计算,<code>tensor</code>的梯度会积累到<code>.grad</code>属性中<br>
-如果要取消追踪,就要调用.<code>detach()</code>从追踪记录分离,也可以使用<code>with torch.no_grad()</code>将不想追踪的代码包裹起来,这在评估模型(eval)时很有用</p>
-<p>补充资料:PyTorch 的 backward 为什么有一个 grad_variables 参数？<br>
-<a href="https://zhuanlan.zhihu.com/p/29923090">https://zhuanlan.zhihu.com/p/29923090</a></p>
-<pre><code>我觉得这部分我看的是挺头晕的,这部分的逻辑还是要再深入看看的
-</code></pre>
-<h1 id="什么是超参数">什么是超参数</h1>
-<p>需要强调的是，这里的批量大小和学习率的值是<strong>人为设定的</strong>，并不是通过模型训练学出的，因此叫作超参数（hyperparameter）。<strong>我们通常所说的“调参”指的正是调节超参数</strong>，例如通过反复试错来找到超参数合适的值。在少数情况下，超参数也可以通过模型训练学出。本书对此类情况不做讨论。<br>
-来源:<a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.1_linear-regression?id=_3-%e4%bc%98%e5%8c%96%e7%ae%97%e6%b3%95">https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.1_linear-regression?id=_3-优化算法</a><br>
-之后有机会可以详细写一篇关于超参数的整合文章</p>
-<h1 id="计算代码运行时间">计算代码运行时间</h1>
-<p><code>start = time()</code><br>
-<code>应该运行的代码块</code><br>
-<code>print(time() - start)</code></p>
-<h1 id="python的yield关键字">python的yield关键字</h1>
-<p>起因是看到这样一段代码：<br>
-来源是：<a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.2_linear-regression-scratch?id=_322-%e8%af%bb%e5%8f%96%e6%95%b0%e6%8d%ae">https://tangshusen.me/Dive-into-DL-PyTorch/#/chapter03_DL-basics/3.2_linear-regression-scratch?id=_322-读取数据</a></p>
-<pre><code class="language-python"># 本函数已保存在d2lzh包中方便以后使用
-def data_iter(batch_size, features, labels):
-    num_examples = len(features)
-    indices = list(range(num_examples))
-    random.shuffle(indices)  # 样本的读取顺序是随机的
-    for i in range(0, num_examples, batch_size):
-        j = torch.LongTensor(indices[i: min(i + batch_size, num_examples)]) # 最后一次可能不足一个batch
-        yield  features.index_select(0, j), labels.index_select(0, j)
-</code></pre>
-<p>这是一个简单的dataloader函数，但是在最后返回值上，我们可以看到他并没使用return，而是用了yield关键字</p>
-<p>关于yield，得讨论到生成器generator，他是记录一定的算法规则，和一般的迭代器不同的是，他是在需要调用时再根据算法推算出相应元素，而不用一口气算完<br>
-yield类似return，回想一下return，函数中执行到这个关键字就会返回响应结果并终止函数执行</p>
-<p>当yield被塞入函数里，会发生什么呢-&gt;该函数变成了生成器-&gt;我们能用next使用它或遍历</p>
-<p>考虑到生成器的目的：记录一定算法规则得到按需生成的列表<br>
-所以yield一般在for循环语句以一定规则生成，之后调用函数，得到一个生成器，再遍历生成器使用它</p>
-<h2 id="当然yield也可以用在别的地方生成器只是一种使用方法">当然，yield也可以用在别的地方，生成器只是一种使用方法</h2>
-<p><code>就像打电玩一样，你蓄力发大招的时候，如果执行了return，就直接把大招发出去了，蓄力结束 如果执行了yield，就相当于返回一个生成器对象，每调用一次next（），就发一个大招</code>（来源知乎）</p>
-<p>与return不同，yield在函数中返回值时会保存函数的状态，使下一次调用函数时会从上一次的状态继续执行，即从yield的下一条语句开始执行，这样做有许多好处，比如我们想要生成一个数列，若该数列的存储空间太大，而我们仅仅需要访问前面几个元素，那么yield就派上用场了，它实现了这种一边循环一边计算的机制，节省了存储空间，提高了运行效率。</p>
-<p>总结整理我们最开始的这段代码：<br>
-我们包装的这么一个dataloader，应该将我们的数据根据需要的batchsize分成一段一段的数据（如1000数据，bs=4，就是250组），然后每次输出一组数据，这时候根据yield会保存到该组数据位置的状态，然后该组进入网络运算过程，实现网络和反向传播后，再循环回来找dataloader要下一组数据，yield的功能就体现出来了，因为我们从直接的状态就可以直接读下一组而不是从头按照索引找新的一组数据。这样</p>
-<p>注：在pytorch中，我们的dataloader库也使用了类似这样的方法</p>
-<h1 id=""></h1>
+                            <p>考虑到原有数据(马赛诸塞州数据集和WHU遥感数据)其中的马赛数据标注混乱(错漏过多),分辨率低下(1m),决定将其删除并添加其他数据进行扩充.<br>
+经过考虑后添加了inria和isprs的potsdam vaihingen数据集,目前有三个数据集,对其进行表格整理(此处感谢jyw师兄给我的建议,学到了许多):</p>
+<table>
+<thead>
+<tr>
+<th>数据集名称</th>
+<th>数据总量</th>
+<th>单张图片尺寸</th>
+<th>分辨率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WHU</td>
+<td>test(2416)+train(4736)+val(1036),均包含image和label</td>
+<td>512*512</td>
+<td>原0.075m采样到0.3m</td>
+</tr>
+<tr>
+<td>inria</td>
+<td>test(180)+train(170)+val(10),test不包含label</td>
+<td>5000*5000</td>
+<td>0.3m</td>
+</tr>
+<tr>
+<td>isprs - potsdam vaihingen数据集</td>
+<td>未确定</td>
+<td>未确定</td>
+<td>未确定</td>
+</tr>
+</tbody>
+</table>
+<p>后续数据个人思路以WHU和inria为主体,WHU开箱即用<br>
+inria需要对原图进行一个分割后使用,5000*5000的数据对其进行512x512的分割大概可生成100张图片,考虑重叠率可能最后没有这个量.按照这样扩充,最后得到inria分割数据有:test(18000),train(17000),val(1000),其中test不包含label.<br>
+isprs - potsdam vaihingen数据集暂时放弃(处理复杂)</p>
+<p>暂定使用Dlinknet和Unet进行测试,在中期答辩前得到结果</p>
 
                         </div>
                         
                             <div class="post-toc">
-                                <ul class="markdownIt-TOC">
-<li><a href="#tensor%E5%92%8Cnumpy%E8%BD%AC%E6%8D%A2">tensor和numpy转换</a></li>
-<li><a href="#autograd">autograd</a></li>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E5%8F%82%E6%95%B0">什么是超参数</a></li>
-<li><a href="#%E8%AE%A1%E7%AE%97%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4">计算代码运行时间</a></li>
-<li><a href="#python%E7%9A%84yield%E5%85%B3%E9%94%AE%E5%AD%97">python的yield关键字</a>
-<ul>
-<li><a href="#%E5%BD%93%E7%84%B6yield%E4%B9%9F%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%9C%A8%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%AA%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">当然，yield也可以用在别的地方，生成器只是一种使用方法</a></li>
-</ul>
-</li>
-<li></li>
-</ul>
-
+                                
                             </div>
                             
                                 
@@ -325,7 +298,7 @@ yield类似return，回想一下return，函数中执行到这个关键字就会
 
                                                 <p class="copyright-item">
                                                     <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                                    <span><a href="https://mbkotori.github.io/post/2021116/">https://mbkotori.github.io/post/2021116/</a></span>
+                                                    <span><a href="https://mbkotori.github.io/post/bishe/">https://mbkotori.github.io/post/bishe/</a></span>
                                                 </p>
 
                                                 <p class="copyright-item">
@@ -340,9 +313,9 @@ yield类似return，回想一下return，函数中执行到这个关键字就会
                                                                     <span style="margin-right:15px">
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mbkotori.github.io/post/2021116/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://mbkotori.github.io/post/2021116/&sharesource=qzone&title=2021/1/16&pics=https://mbkotori.github.io/images/avatar.png?v=1614828919342&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://mbkotori.github.io/post/2021116/&sharesource=weibo&title=2021/1/16 + " - " + &pic="https://mbkotori.github.io/images/avatar.png?v=1614828919342 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mbkotori.github.io/post/bishe/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://mbkotori.github.io/post/bishe/&sharesource=qzone&title=毕设内容整理&pics=https://mbkotori.github.io/images/avatar.png?v=1614828919342&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://mbkotori.github.io/post/bishe/&sharesource=weibo&title=毕设内容整理 + " - " + &pic="https://mbkotori.github.io/images/avatar.png?v=1614828919342 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
@@ -353,8 +326,8 @@ yield类似return，回想一下return，函数中执行到这个关键字就会
                                                                                     <span class="tag ">
                         
                         
-                        <a href="https://mbkotori.github.io/tag/daily/">#
-                    每日总结
+                        <a href="https://mbkotori.github.io/tag/xue-xi-andfen-xiang/">#
+                    学习&分享
                         </a>
                         
                             
@@ -372,15 +345,7 @@ yield类似return，回想一下return，函数中执行到这个关键字就会
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://mbkotori.github.io/post/2021118/">
-                                                                                            2021/1/18
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://mbkotori.github.io/post/2021111-zong-jie/">
-                                                                                                    2021/1/11
-                                                                                                </a>
-                                                                                                
                                                                                 </section>
                     </article>
                 </div>
